@@ -32,7 +32,7 @@
       section {
         position: relative;
         max-width: 900px;
-        padding: 0 20px !important;
+        padding: 0 25px !important;
         margin: auto;
       }
 
@@ -55,8 +55,12 @@
       section {
         position: relative;
         max-width: 900px;
-        padding: 0 10px !important;
+        padding: 0 20px !important;
         margin: auto;
+      }
+
+      .faq-label {
+        padding: 15px 10px !important;
       }
 
       .arrow-right {
@@ -71,6 +75,42 @@
         min-height: 150px;
         height: auto !important;
 
+      }
+
+      .contact-left {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-inner {
+        justify-content: center !important;
+        padding: 10px 15px !important;
+      }
+
+      .contact-btns {
+        flex-wrap: nowrap !important;
+      }
+
+      .contact-btn {
+        font-size: 15px !important;
+        padding: 10px 10px !important;
+      }
+
+      .video-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .video-card>img {
+        width: 70% !important;
+        height: 80% !important;
+
+      }
+
+      .videos-grid {
+        gap: 0px !important;
+        grid-template-columns: 1fr !important;
       }
     }
 
@@ -117,8 +157,8 @@
     }
 
     .avatars img {
-      width: 36px;
-      height: 36px;
+      width: 42.85px;
+      height: 42.85px;
       border-radius: 50%;
       border: 2px solid #fff;
       margin-left: -10px;
@@ -136,11 +176,11 @@
 
     .star {
       color: #f5a623;
-      font-size: 18px;
+      font-size: 30px;
     }
 
     .proof-text {
-      font-size: 14px;
+      font-size: 16px;
       color: #555;
       font-weight: 500;
     }
@@ -462,7 +502,7 @@
       }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1100px) {
       .gradient-bar {
         transform: rotate(20deg);
         right: 40%;
@@ -483,6 +523,12 @@
       .why-card {
         width: 100% !important;
         height: 100% !important;
+      }
+
+      .pricing-row {
+        width: 90%;
+        min-width: auto;
+        border-radius: 40px;
       }
     }
 
@@ -613,7 +659,7 @@
     }
 
     .path-desc {
-      font-size: clamp(12px, 2vw, 16px);
+      font-size: clamp(14px, 2vw, 16px);
       color: #666;
       line-height: 1.6;
       margin-bottom: 18px;
@@ -630,7 +676,7 @@
       display: flex;
       align-items: flex-start;
       gap: 8px;
-      font-size: clamp(12px, 2vw, 14px);
+      font-size: clamp(14px, 2vw, 16px);
       color: #444;
       line-height: 1.5;
     }
@@ -947,7 +993,7 @@
     }
 
     .biz-sub {
-      font-size: clamp(13px, 1.5vw, 16px);
+      font-size: clamp(14px, 1.5vw, 16px);
       color: #777;
       line-height: 1.7;
       max-width: 800px;
@@ -1050,7 +1096,7 @@
     }
 
     .step-label {
-      font-size: clamp(11px, 1.2vw, 13px);
+      font-size: clamp(14px, 1.2vw, 16px);
       color: #7b4fff;
       font-weight: 500;
       text-align: center;
@@ -1102,7 +1148,7 @@
     }
 
     .month-tag {
-      font-size: clamp(12px, 1.2vw, 16px);
+      font-size: clamp(14px, 1.2vw, 16px);
       font-weight: 500;
       letter-spacing: 1.5px;
       color: #7b4fff;
@@ -1117,7 +1163,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 0;
-      font-size: clamp(12px, 1.3vw, 14px);
+      font-size: clamp(14px, 1.3vw, 16px);
     }
 
     .flex {
@@ -1222,7 +1268,7 @@
     }
 
     .maths-p {
-      font-size: clamp(12px, 1.4vw, 15px);
+      font-size: clamp(14px, 1.4vw, 16px);
       color: #555;
       line-height: 125%;
       margin-bottom: 16px;
@@ -1305,9 +1351,21 @@
       position: absolute;
       top: 0;
       left: -50px;
+      width: 130px;
+      height: 130px;
     }
 
     @media (max-width: 800px) {
+      .stackly-logo {
+        position: absolute;
+        top: 1px0;
+        left: 0;
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    @media (max-width: 500px) {
       .stackly-logo {
         position: absolute;
         top: 1px0;
@@ -1316,11 +1374,12 @@
         height: 50px;
       }
 
+
     }
 
     .stackly-logo>img {
-      width: 130px;
-      height: 130px;
+      width: 100%;
+      height: 100%;
     }
 
     .stackly-title {
@@ -1336,7 +1395,7 @@
     }
 
     .stackly-sub {
-      font-size: clamp(12px, 1.3vw, 16px);
+      font-size: clamp(14px, 1.3vw, 16px);
       color: #555;
       line-height: 1.7;
       max-width: 755px;
@@ -1547,6 +1606,11 @@
       .why-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .footer-logo>img {
+        height: 100%;
+        max-width: 10rem;
+      }
     }
 
     @media (max-width: 380px) {
@@ -1589,13 +1653,13 @@
     }
 
     .why-card-title {
-      font-size: clamp(13px, 1.4vw, 15px);
+      font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 700;
       color: #0d0d0d;
     }
 
     .why-card-desc {
-      font-size: clamp(11px, 1.2vw, 13px);
+      font-size: clamp(14px, 1.2vw, 16px);
       color: #888;
       line-height: 1.6;
     }
@@ -1635,24 +1699,11 @@
 
     }
 
-    @media (max-width: 500px) {
-      .videos-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .video-card {
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      aspect-ratio: 3/4;
-      background: #e0d8f0;
-      cursor: pointer;
-    }
 
     .video-card>img {
       width: 100%;
       height: 100%;
+      border-radius: 20px
     }
 
     /* play button overlay */
@@ -2123,7 +2174,7 @@
     }
 
     .acc-label-name {
-      font-size: clamp(13px, 1.5vw, 24px);
+      font-size: clamp(16px, 1.5vw, 24px);
       font-weight: 500;
       color: #0d0d0d;
     }
@@ -2182,7 +2233,7 @@
     }
 
     .acc-content>ol>li {
-      font-size: clamp(12px, 2vw, 16px);
+      font-size: clamp(14px, 2vw, 16px);
       font-weight: 500;
     }
 
@@ -2259,7 +2310,7 @@
     }
 
     .stat-desc {
-      font-size: clamp(11px, 1.2vw, 16px);
+      font-size: clamp(14px, 1.2vw, 16px);
       color: #888;
       line-height: 1.6;
     }
@@ -2520,8 +2571,7 @@
     }
 
     .footer-logo>img {
-      height: 10rem;
-
+      height: 100%;
     }
 
     .footer-logo-icon {
@@ -2598,17 +2648,20 @@
     <div class="hero-inner">
       <div class="social-proof">
         <div class="avatars">
-          <img src="https://i.pravatar.cc/36?img=1" alt="" />
-          <img src="https://i.pravatar.cc/36?img=2" alt="" />
-          <img src="https://i.pravatar.cc/36?img=3" alt="" />
-          <img src="https://i.pravatar.cc/36?img=4" alt="" />
-          <img src="https://i.pravatar.cc/36?img=5" alt="" />
+          <img src="./assets/e4f6648cc845ed5fbd08c0f96f7be87e74cd548a.jpg" alt="" />
+          <img src="./assets/02e47e5a2968b0aced7a8a88c581757b3e710e57.jpg" alt="" />
+          <img src="./assets/3f997ac88310448974cf239a72bad8ef817f985f.jpg" alt="" />
+          <img src="./assets/5aab5459786b226d5d70e39a1dfa0e817fee1e4d.jpg" alt="" />
+          <img src="./assets/f1326acd84b14d7fca1da878a3fa9ec7be74ee69.jpg" alt="" />
+
         </div>
-        <div class="stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
-            class="star">★</span><span class="star">★</span>
+        <div style="display: flex; flex-direction: column;">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span>
+          </div>
+          <span class="proof-text">Join 2000+ students</span>
         </div>
-        <span class="proof-text">Join 2000+ students</span>
       </div>
 
       <h1>
