@@ -1239,6 +1239,7 @@
       color: #7b4fff;
     }
 
+
     .stackly-sub {
       font-size: 16px;
       color: #555;
@@ -1351,6 +1352,12 @@
     /*  */
     /*  */
     /*  */
+    .features-list .acc-item {
+      background: transparent;
+      padding: 0 10px;
+      border-radius: 12px;
+    }
+
     .acc-item input[type="checkbox"] {
       display: none;
     }
@@ -1365,7 +1372,7 @@
       gap: 12px;
     }
 
-    .acc-name {
+    .features-list .acc-name {
       font-size: clamp(16px, 1.5vw, 22px);
       font-weight: 500;
       color: #0d0d0d;
@@ -1374,7 +1381,7 @@
       flex: 1;
     }
 
-    .acc-icon {
+    .features-list .acc-icon {
       width: 26px;
       height: 26px;
       border: 1.5px solid #9b7fe0;
@@ -1583,9 +1590,10 @@
     /* carsousel */
 
     .reviews-section {
-      margin: 60px auto;
+      margin: 60px auto 0px auto;
       position: relative;
       max-width: 900px;
+      padding-bottom: 60px;
     }
 
     .arrow {
@@ -1924,7 +1932,8 @@
       background: url(http://a8x.local/wp-content/uploads/2026/04/Frame-1707480793123.png);
       background-repeat: no-repeat;
       background-size: cover;
-      margin: 60px auto;
+      margin: 0px auto 60px auto;
+      ;
       max-width: 100%;
     }
 
@@ -1954,6 +1963,7 @@
     .Track-main {
       max-width: 900px;
       margin: auto;
+
     }
 
     .acc-group {
@@ -1965,6 +1975,10 @@
       margin: auto;
     }
 
+    /*  */
+    /*  */
+    /*  */
+    /*  */
     /* ── PURE CSS ACCORDION ── */
     .acc-item input[type="checkbox"] {
       display: none;
@@ -2046,18 +2060,17 @@
     }
 
 
-    /* first item open by default */
-    #m1:checked~.acc-label,
-    #m1b:checked~.acc-label {
-      border-color: #7b4fff;
-      border-radius: 12px 12px 0 0;
-      margin-bottom: 0;
-    }
-
     .acc-content>ol>li {
       font-size: 16px;
       font-weight: 500;
     }
+
+
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
 
 
     /* ── STATS ROW ── */
@@ -2232,6 +2245,7 @@
     }
 
     .faq-content {
+      box-sizing: content-box;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease, padding 0.3s ease;
@@ -2242,7 +2256,7 @@
       background: rgba(255, 255, 255, 0.55);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1.5px solid rgba(255, 255, 255, 0.85);
+     
       border-top: none;
       border-radius: 0 0 50px 50px;
       margin-top: -2px;
@@ -2265,6 +2279,7 @@
     .faq-item input:checked~.faq-content {
       max-height: 300px;
       padding: 16px 24px 20px;
+      opacity: 100% !important;
     }
 
     .faq-item.highlight .faq-q-icon {
@@ -2443,6 +2458,8 @@
       border-color: #7b4fff;
       border-top: none;
       font-size: 16px;
+      opacity: 100% !important;
+      text-align: start;
     }
 
     /* ========== BREAKPOINTS: 1400px+ (XL Desktops) ========== */
@@ -2806,6 +2823,10 @@
 <body>
   <!-- ── HERO ── -->
   <section class="hero">
+    <div>
+      <img src="http://a8x.local/wp-content/uploads/2026/04/080d6cadffb7a8b893457f60e49fcbdb97881cec.png" alt="err"
+        style="max-height:56px ; max-width: 220.92px; height: 100%; width: 100%; margin: 20px auto  30px auto;" />
+    </div>
     <svg class="backgroundswirl" width="1172" height="803" viewBox="0 0 1172 803" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
@@ -2852,18 +2873,19 @@
         required.
       </p>
 
-      <button class="btn-access">ACCESS NOW</button>
+      <button class="btn-access" aria-label="Access Creative AI course for €47 one-time payment">ACCESS NOW</button>
 
       <div class="pricing-row">
         <span class="price-old">€498</span>
         <span class="price-new">€47</span>
         <span class="badge">ONE-TIME PAYMENT</span>
         <span class="badge">LIFETIME ACCESS</span>
-        <button class="btn-access-sm">ACCESS NOW</button>
+        <button class="btn-access-sm" aria-label="Access Creative AI course for €47 one-time payment">ACCESS
+          NOW</button>
       </div>
 
       <div class="video-wrap">
-        <div class="play-btn">
+        <div class="play-btn" aria-label="Watch course introduction video">
           <svg width="28" height="31" viewBox="0 0 28 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M26.1577 13.2206C27.8746 14.2118 27.8746 16.69 26.1577 17.6813L3.86314 30.553C2.14621 31.5443 4.80669e-05 30.3052 4.81536e-05 28.3227L4.92789e-05 2.57919C4.93655e-05 0.596648 2.14621 -0.642439 3.86314 0.348831L26.1577 13.2206Z"
@@ -3443,6 +3465,7 @@
       </div>
     </div>
 
+
     <!-- bottom button -->
     <div class="all-features-btn">
       <a href="#">All Features Included</a>
@@ -3808,79 +3831,6 @@
     </div>
   </section>
 
-
-  <script>
-    const track = document.getElementById('track');
-    const outer = document.getElementById('outer');
-    const dotsEl = document.getElementById('dots');
-    const allCards = Array.from(track.children);
-    let cur = 0;
-
-    function perPage() {
-      const w = window.innerWidth;
-      if (w < 500) return 1;
-      if (w <= 600) return 2;
-      if (w <= 900) return 3;
-      return 4;
-    }
-
-    function cardWidth() {
-      const gap = 16;
-      const pp = perPage();
-      const outerW = outer.offsetWidth - 4; // subtract padding 50px each side
-      return (outerW - (gap * (pp - 1))) / pp;
-    }
-
-    function totalPages() {
-      return Math.ceil(allCards.length / perPage());
-    }
-
-    function buildDots() {
-      dotsEl.innerHTML = '';
-      for (let i = 0; i < totalPages(); i++) {
-        const d = document.createElement('div');
-        d.className = 'dot' + (i === cur ? ' active' : '');
-        d.onclick = () => goTo(i);
-        dotsEl.appendChild(d);
-      }
-    }
-
-    function setCardWidths() {
-      const w = cardWidth();
-      allCards.forEach(c => { c.style.width = w + 'px'; c.style.minWidth = w + 'px'; });
-    }
-
-    function goTo(page) {
-      cur = Math.max(0, Math.min(page, totalPages() - 1));
-      const w = cardWidth();
-      const gap = 16;
-      const offset = cur * perPage() * (w + gap);
-      track.style.transform = `translateX(-${offset}px)`;
-      dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
-    }
-
-    function init() {
-      setCardWidths();
-      buildDots();
-      goTo(0);
-    }
-
-    document.getElementById('btnLeft').onclick = () => goTo(cur - 1);
-    document.getElementById('btnRight').onclick = () => goTo(cur + 1);
-
-    init();
-    window.addEventListener('resize', init);
-
-    // swipe
-    let sx = 0;
-    outer.addEventListener('touchstart', e => sx = e.touches[0].clientX);
-    outer.addEventListener('touchend', e => {
-      const diff = sx - e.changedTouches[0].clientX;
-      if (diff > 50) goTo(cur + 1);
-      else if (diff < -50) goTo(cur - 1);
-    });
-  </script>
-
   <!-- ── CURRICULUM ── -->
   <section class="curriculum-section">
     <div class="invest-section">
@@ -3970,16 +3920,16 @@
       </div>
     </div>
 
-    <div class="Track-main">
+    <div class="invest-section">
       <h2 class="curriculum-title">The only program you need to become a creative AI expert</h2>
 
       <!-- Track 1 -->
       <div class="acc-group">
-        <h3 class="track-title">Creative AI Mastery</h3>
+        <h3 class="track-title" style="margin: 20px 0 20px 0;">AI Business Model</h3>
 
         <div class="acc-item">
-          <input type="checkbox" id="m1" checked />
-          <label class="acc-label" for="m1">
+          <input type="checkbox" id="m1b2" /> <!-- CHANGED: m1b → m1b2 -->
+          <label class="acc-label" for="m1b2"> <!-- CHANGED: for="m1b2" -->
             <span class="acc-label-name">Module 1: Initial Module</span>
             <div class="acc-icon">+</div>
           </label>
@@ -3989,68 +3939,63 @@
               Classes</p>
             <ol style="padding-left:16px;display:flex;flex-direction:column;gap:6px;">
               <li>Welcome to the course and overview</li>
-              <li>Join the community and share your progress</li>
+              <li>Join the community and show your progress</li>
               <li>Key updates on AI: What you need to know</li>
             </ol>
           </div>
         </div>
 
         <div class="acc-item">
-          <input type="checkbox" id="m2" />
-          <label class="acc-label" for="m2">
+          <input type="checkbox" id="m2b2" /> <!-- CHANGED: m2b → m2b2 -->
+          <label class="acc-label" for="m2b2"> <!-- CHANGED: for="m2b2" -->
             <span class="acc-label-name">Module 2: Introduction to AI</span>
             <div class="acc-icon">+</div>
           </label>
-          <div class="acc-content">Learn the fundamentals of AI and how to use the most powerful tools available today.
-          </div>
+          <div class="acc-content">Build the foundation of your AI business with proven strategies and frameworks.</div>
         </div>
 
         <div class="acc-item">
-          <input type="checkbox" id="m3" />
-          <label class="acc-label" for="m3">
+          <input type="checkbox" id="m3b2" /> <!-- CHANGED -->
+          <label class="acc-label" for="m3b2"> <!-- CHANGED -->
             <span class="acc-label-name">Module 3: AI Image Generation</span>
             <div class="acc-icon">+</div>
           </label>
-          <div class="acc-content">Master the art of generating stunning, professional-grade images using AI tools.
-          </div>
+          <div class="acc-content">Use AI image generation as a service offering to attract high-paying clients.</div>
         </div>
 
         <div class="acc-item">
-          <input type="checkbox" id="m4" />
-          <label class="acc-label" for="m4">
+          <input type="checkbox" id="m4b2" /> <!-- CHANGED -->
+          <label class="acc-label" for="m4b2"> <!-- CHANGED -->
             <span class="acc-label-name">Module 4: Realistic Thumbnails with AI</span>
             <div class="acc-icon">+</div>
           </label>
-          <div class="acc-content">Create eye-catching thumbnails that drive clicks and engagement using AI.</div>
+          <div class="acc-content">Package thumbnail creation as a premium service businesses will pay for.</div>
         </div>
 
         <div class="acc-item">
-          <input type="checkbox" id="m5" />
-          <label class="acc-label" for="m5">
+          <input type="checkbox" id="m5b2" /> <!-- CHANGED -->
+          <label class="acc-label" for="m5b2"> <!-- CHANGED -->
             <span class="acc-label-name">Module 5: AI Video Generation</span>
             <div class="acc-icon">+</div>
           </label>
-          <div class="acc-content">Learn to produce cinematic AI videos from scratch with no camera or studio needed.
-          </div>
+          <div class="acc-content">Offer AI video services to brands and agencies at premium prices.</div>
         </div>
 
         <div class="acc-item">
-          <input type="checkbox" id="m6" />
-          <label class="acc-label" for="m6">
+          <input type="checkbox" id="m6b2" /> <!-- CHANGED -->
+          <label class="acc-label" for="m6b2"> <!-- CHANGED -->
             <span class="acc-label-name">Module 6: Advance AI Creation and VFX</span>
             <div class="acc-icon">+</div>
           </label>
-          <div class="acc-content">Take your skills to the next level with advanced visual effects and AI creation
-            techniques.</div>
+          <div class="acc-content">Advanced VFX services are the highest paid in the market — master them here.</div>
         </div>
       </div>
-
       <!-- Track 2 -->
       <div class="acc-group">
         <h3 class="track-title" style="margin: 20px 0 20px 0;">AI Business Model</h3>
 
         <div class="acc-item">
-          <input type="checkbox" id="m1b" checked />
+          <input type="checkbox" id="m1b" />
           <label class="acc-label" for="m1b">
             <span class="acc-label-name">Module 1: Initial Module</span>
             <div class="acc-icon">+</div>
@@ -4267,7 +4212,7 @@
           </div>
         </div>
         <div class="contact-btns">
-          <a href="mailto:hello@expertus.com" class="contact-btn">
+          <a href="mailto:hello@expertus.com" class="contact-btn" aria-label="Email us for questions">
             <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect width="24" height="18" fill="url(#pattern0_95_911)" />
@@ -4282,7 +4227,7 @@
 
             Email us
           </a>
-          <a href="#" class="contact-btn">
+          <a href="#" class="contact-btn" aria-label="Message us for support">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect width="23.9521" height="24" fill="url(#pattern0_95_914)" />
@@ -4312,104 +4257,719 @@
 
     <div class="footer-links">
       <a href="#">© Expertus</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
+      <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+      <a href="#" aria-label="Terms and Conditions">Terms & Conditions</a>
     </div>
+
     <script>
       (function () {
-        function initAllAccordions() {
-          console.log('=== INITIALIZING ACCORDIONS ===');
+        // Smooth animation function
+        function animateHeight(element, targetHeight, duration) {
+          var startHeight = element.offsetHeight;
+          var startTime = null;
 
-          // Handle ALL accordion types (both .acc-item and .faq-item)
+          // Don't animate if heights are the same
+          if (startHeight === targetHeight) return;
+
+          function step(currentTime) {
+            if (!startTime) startTime = currentTime;
+            var elapsed = currentTime - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+
+            // Easing function for smooth motion
+            var easeProgress = 1 - Math.pow(1 - progress, 3);
+
+            var newHeight = startHeight + (targetHeight - startHeight) * easeProgress;
+            element.style.maxHeight = newHeight + 'px';
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              element.style.maxHeight = targetHeight === 0 ? '0px' : 'none';
+            }
+          }
+
+          requestAnimationFrame(step);
+        }
+
+        function initAccordions() {
           var allAccordions = document.querySelectorAll('.acc-item, .faq-item');
           console.log('Found accordions:', allAccordions.length);
 
-          allAccordions.forEach(function (item, idx) {
-            var label = item.querySelector('.acc-label, .faq-label');
-            var content = item.querySelector('.acc-content, .faq-content');
-            var checkbox = item.querySelector('input[type="checkbox"]');
+          allAccordions.forEach(function (accordion) {
+            var header = accordion.querySelector('.acc-label, .faq-label');
+            var body = accordion.querySelector('.acc-content, .faq-content') || accordion.querySelector('.acc-content, .faq-content');
+            var checkbox = accordion.querySelector('input[type="checkbox"]');
 
-            if (!label || !content) return;
+            if (!header || !body) return;
 
-            // Set smooth transition
-            content.style.transition = 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease-out';
-            content.style.overflow = 'hidden';
-            content.style.willChange = 'max-height, padding';
+            // Store the actual content height (will be recalculated when needed)
+            var cachedHeight = null;
 
-            // Set initial state (using scrollHeight for perfect height)
+            function getContentHeight() {
+              // Temporarily show to measure
+              var originalDisplay = body.style.display;
+              var originalMaxHeight = body.style.maxHeight;
+              var originalPadding = body.style.padding;
+
+              body.style.display = 'block';
+              body.style.maxHeight = 'none';
+              body.style.padding = '20px 24px 24px';
+              var height = body.scrollHeight;
+
+              // Restore
+              body.style.display = originalDisplay;
+              body.style.maxHeight = originalMaxHeight;
+              body.style.padding = originalPadding;
+
+              return height;
+            }
+
+            // Set initial styles
+            body.style.overflow = 'hidden';
+            body.style.transition = 'none';
+            body.style.willChange = 'max-height';
+
+            // Set initial state
             if (checkbox && checkbox.checked) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              content.style.padding = '20px 24px 24px';
-              content.style.opacity = '1';
+              var initialHeight = getContentHeight();
+              body.style.maxHeight = initialHeight + 'px';
+              body.style.padding = '20px 24px 24px';
+              cachedHeight = initialHeight;
             } else {
-              content.style.maxHeight = '0';
-              content.style.padding = '0 24px';
-              content.style.opacity = '0';
+              body.style.maxHeight = '0px';
+              body.style.padding = '0 24px';
             }
 
-            // Hide checkbox
-            if (checkbox) {
-              checkbox.style.display = 'none';
-            }
-
-            // Add click handler
-            label.style.cursor = 'pointer';
-            label.style.userSelect = 'none';
-
-            label.onclick = function (e) {
+            // Click handler
+            header.style.cursor = 'pointer';
+            header.onclick = function (e) {
               e.preventDefault();
               e.stopPropagation();
 
-              var isOpen = content.style.maxHeight !== '0px';
+              var isOpen = body.style.maxHeight !== '0px';
 
               if (isOpen) {
-                // Close
-                content.style.maxHeight = '0';
-                content.style.padding = '0 24px';
+                // CLOSE - animate to 0
+                var currentH = body.offsetHeight;
+                body.style.maxHeight = currentH + 'px';
+
                 setTimeout(function () {
-                  if (content.style.maxHeight === '0px') {
-                    content.style.opacity = '0';
-                  }
-                }, 50);
+                  animateHeight(body, 0, 350);
+                }, 10);
+                body.style.padding = '0 24px';
                 if (checkbox) checkbox.checked = false;
               } else {
-                // Open - using scrollHeight for 100% height
-                content.style.opacity = '1';
-                content.style.maxHeight = content.scrollHeight + 'px';
-                content.style.padding = '20px 24px 24px';
+                // OPEN - get fresh height and animate to it
+                var newHeight = getContentHeight();
+                cachedHeight = newHeight;
+
+                // First set to 0, then animate to full height
+                body.style.maxHeight = '0px';
+
+                setTimeout(function () {
+                  animateHeight(body, newHeight, 350);
+                }, 20);
+                body.style.padding = '20px 24px 24px';
                 if (checkbox) checkbox.checked = true;
               }
             };
           });
-
-          console.log('=== ACCORDIONS READY ===');
         }
 
-        // Run when page is ready
+        // Run on load
         if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', initAllAccordions);
+          document.addEventListener('DOMContentLoaded', initAccordions);
         } else {
-          initAllAccordions();
+          initAccordions();
         }
 
-        // Retry after delay for dynamic content
-        setTimeout(initAllAccordions, 500);
-
-        // Handle window resize
-        window.addEventListener('resize', function () {
+        // Re-run after images load to ensure correct heights
+        window.addEventListener('load', function () {
           setTimeout(function () {
-            document.querySelectorAll('.acc-item, .faq-item').forEach(function (item) {
-              var content = item.querySelector('.acc-content, .faq-content');
-              var checkbox = item.querySelector('input[type="checkbox"]');
-              if (content && checkbox && checkbox.checked && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = content.scrollHeight + 'px';
+            // Refresh heights for any open accordions
+            document.querySelectorAll('.acc-item, .faq-item').forEach(function (accordion) {
+              var body = accordion.querySelector('.acc-content, .faq-content');
+              var checkbox = accordion.querySelector('input[type="checkbox"]');
+              if (checkbox && checkbox.checked && body) {
+                // Temporarily show to measure
+                body.style.maxHeight = 'none';
+                var newHeight = body.scrollHeight;
+                body.style.maxHeight = newHeight + 'px';
               }
             });
-          }, 100);
+          }, 150);
         });
       })();
     </script>
+
+    <script>
+      const track = document.getElementById('track');
+      const outer = document.getElementById('outer');
+      const dotsEl = document.getElementById('dots');
+      const allCards = Array.from(track.children);
+      let cur = 0;
+
+      function perPage() {
+        const w = window.innerWidth;
+        if (w < 500) return 1;
+        if (w <= 600) return 2;
+        if (w <= 900) return 3;
+        return 4;
+      }
+
+      function cardWidth() {
+        const gap = 16;
+        const pp = perPage();
+        const outerW = outer.offsetWidth - 4; // subtract padding 50px each side
+        return (outerW - (gap * (pp - 1))) / pp;
+      }
+
+      function totalPages() {
+        return Math.ceil(allCards.length / perPage());
+      }
+
+      function buildDots() {
+        dotsEl.innerHTML = '';
+        for (let i = 0; i < totalPages(); i++) {
+          const d = document.createElement('div');
+          d.className = 'dot' + (i === cur ? ' active' : '');
+          d.onclick = () => goTo(i);
+          dotsEl.appendChild(d);
+        }
+      }
+
+      function setCardWidths() {
+        const w = cardWidth();
+        allCards.forEach(c => { c.style.width = w + 'px'; c.style.minWidth = w + 'px'; });
+      }
+
+      function goTo(page) {
+        cur = Math.max(0, Math.min(page, totalPages() - 1));
+        const w = cardWidth();
+        const gap = 16;
+        const offset = cur * perPage() * (w + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+        dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+      }
+
+      function init() {
+        setCardWidths();
+        buildDots();
+        goTo(0);
+      }
+
+      document.getElementById('btnLeft').onclick = () => goTo(cur - 1);
+      document.getElementById('btnRight').onclick = () => goTo(cur + 1);
+
+      init();
+      window.addEventListener('resize', init);
+
+      // swipe
+      let sx = 0;
+      outer.addEventListener('touchstart', e => sx = e.touches[0].clientX);
+      outer.addEventListener('touchend', e => {
+        const diff = sx - e.changedTouches[0].clientX;
+        if (diff > 50) goTo(cur + 1);
+        else if (diff < -50) goTo(cur - 1);
+      });
+    </script>
   </footer>
+
+  <div style="display: none;" aria-hidden="true">
+
+    <!-- Course Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Master Creative AI in Days",
+    "description": "Create viral AI content, special effects, and AI avatars that look like they cost thousands. Start earning from AI with no experience needed.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Creative AI Mastery"
+    },
+    "audience": {
+      "@type": "Audience",
+      "name": "Beginners, Content Creators, Freelancers"
+    },
+    "educationalLevel": "Beginner",
+    "teaches": [
+      "AI content creation",
+      "Viral video production",
+      "AI avatar generation",
+      "Special effects with AI",
+      "Monetizing AI skills"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "47",
+      "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "category": "One-time payment"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "2000",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+    <!-- Carousel ItemList Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AI Avatar Carousel Examples",
+    "description": "Examples of AI-generated avatars and visual effects created using our course techniques",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "AI Avatar - Style 1",
+        "url": "https://YOUR-DOMAIN.com/#carousel-item-1",
+        "image": "http://a8x.local/wp-content/uploads/2026/04/8096c4f0d276e94c57da5c3a9b0f74e26823974a.png"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Avatar - Style 2",
+        "url": "https://YOUR-DOMAIN.com/#carousel-item-2",
+        "image": "http://a8x.local/wp-content/uploads/2026/04/8096c4f0d276e94c57da5c3a9b0f74e26823974a.png"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Avatar - Style 3",
+        "url": "https://YOUR-DOMAIN.com/#carousel-item-3"
+      }
+    ]
+  }
+  </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need technical experience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No technical background or experience needed. The course starts from absolute scratch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this a subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, it's a one-time payment of €47 with lifetime access."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I really make money with AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the programme teaches a proven system to start earning from AI-generated content."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What will I learn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creating viral content, special effects, and AI avatars that look professional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there expensive subscriptions needed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No expensive subscriptions required. The course uses affordable or free AI tools."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- Product Schema for Pricing -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Creative AI Mastery Course",
+    "description": "Complete programme for mastering creative AI and monetizing your skills",
+    "brand": {
+      "@type": "Brand",
+      "name": "Creative AI Mastery"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "47",
+      "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": "https://YOUR-DOMAIN.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2147"
+    }
+  }
+  </script>
+
+    <!-- Features Grid Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Creative AI Course Features",
+    "description": "What you'll learn in the Creative AI Mastery course",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Hollywood Visual Effects",
+        "description": "Add professional visual effects to your content using AI tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Character Consistency",
+        "description": "Maintain consistent AI characters across all your content"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "VIRAL Reels, TikToks, Shorts",
+        "description": "Create viral short-form content for social media platforms"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Profitable Ads",
+        "description": "Generate high-converting ad creatives with AI"
+      }
+    ]
+  }
+  </script>
+
+    <!-- Why Choose Us Cards Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Why Choose Creative AI Mastery",
+    "description": "Benefits of taking our Creative AI course",
+    "numberOfItems": 6,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Step-by-step guides",
+        "description": "From learning skills to managing clients"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Video tutorials",
+        "description": "Detailed lessons with lifetime access"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Website Design",
+        "description": "Professional website that attracts clients"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Find your perfect market",
+        "description": "Identify profitable niches and create irresistible offers"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Learn Value Ladder",
+        "description": "Scale your income with strategic pricing"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Continuous updates",
+        "description": "Most complete and up-to-date program in the market"
+      }
+    ]
+  }
+  </script>
+
+    <!-- Testimonial Reviews Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Student Testimonials",
+    "description": "Real reviews from Creative AI Mastery students",
+    "numberOfItems": 5,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Review",
+          "author": "Juan Carlos García López",
+          "datePublished": "2026-04-03",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "name": "I made my first £1,000 in a weekend!",
+          "reviewBody": "The course helped me start earning immediately with AI skills."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Review",
+          "author": "Sofia Delgado Navarro",
+          "datePublished": "2026-04-03",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "name": "Best investment I've ever made!",
+          "reviewBody": "The AI business model section alone is worth the price."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Review",
+          "author": "Carlos Herrera Vega",
+          "datePublished": "2026-04-03",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "name": "From zero to first client in 2 weeks!",
+          "reviewBody": "The step-by-step guidance made everything so clear."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Review",
+          "author": "Lucia Romero Castillo",
+          "datePublished": "2026-04-03",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "name": "This changed everything for me!",
+          "reviewBody": "I now have a profitable AI service business."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Review",
+          "author": "Miguel González Ruiz",
+          "datePublished": "2026-04-02",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "name": "Worth every single cent!",
+          "reviewBody": "The tools and techniques are cutting-edge."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- Video Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Creative AI Course Introduction",
+    "description": "Learn how to master creative AI and start getting paid",
+    "thumbnailUrl": "https://YOUR-DOMAIN.com/thumbnail.jpg",
+    "uploadDate": "2026-04-08",
+    "duration": "PT5M"
+  }
+  </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Creative AI Mastery",
+    "description": "Online education platform for creative artificial intelligence",
+    "url": "https://YOUR-DOMAIN.com",
+    "logo": "https://YOUR-DOMAIN.com/logo.png",
+    "sameAs": [
+      "https://facebook.com/creativeaimastery",
+      "https://twitter.com/creativeai",
+      "https://instagram.com/creativeaimastery"
+    ]
+  }
+  </script>
+
+    <!-- Video Gallery Schema (For testimonial videos) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Student Success Videos",
+    "description": "Video testimonials from Creative AI Mastery students",
+    "numberOfItems": 6,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Student Success Story 1",
+          "thumbnailUrl": "http://a8x.local/wp-content/uploads/2026/04/57358d618f009bfd2226e5432569bfeadf47d9e4.png"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Student Success Story 2",
+          "thumbnailUrl": "http://a8x.local/wp-content/uploads/2026/04/8ec4d0f264ee1cf1a63b76fad7bc777ea72dca7f.png"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Student Success Story 3",
+          "thumbnailUrl": "http://a8x.local/wp-content/uploads/2026/04/c2d5e80800f8ab9d774aeae31b8776c10d12348d.png"
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- Stackly Features Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Stackly.es Features",
+    "description": "Professional tools included with Creative AI Mastery course",
+    "numberOfItems": 8,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Funnels and Website Builder",
+        "description": "Build high-converting funnels and websites without coding"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Smart Client Onboarding Funnels",
+        "description": "Automate client onboarding with personalised funnels"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Optimized Proposals & Contracts",
+        "description": "Professional proposals that close deals faster"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Appointment Scheduling Software",
+        "description": "Let clients book meetings directly in your calendar"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Live Conferencing Software",
+        "description": "Host video calls inside the platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "CRM Lead Management System",
+        "description": "Manage all leads and clients in one dashboard"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Smarter Invoicing & Payment Flows",
+        "description": "Send invoices and get paid faster"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "White Label Client Portals",
+        "description": "Branded portals for clients to track progress"
+      }
+    ]
+  }
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://YOUR-DOMAIN.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2",
+        "name": "Creative AI Mastery Course",
+        "item": "https://YOUR-DOMAIN.com/master-creative-ai"
+      }
+    ]
+  }
+  </script>
+
+    <!-- Hidden Keywords -->
+    <div class="seo-keywords">
+      creative AI course, AI content creation, make money with AI, AI avatars, viral AI content, AI special effects, AI
+      for beginners, AI monetization, €47 AI course, lifetime access AI training, creative AI mastery, AI business
+      model, stackly.es, AI video generation, AI image generation, voice cloning AI, AI freelancing course, Hollywood
+      visual effects AI, character consistency AI, profitable ads AI
+    </div>
+
+  </div>
 
 
 </body>
