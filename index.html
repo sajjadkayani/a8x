@@ -28,91 +28,6 @@
       margin: auto;
     }
 
-    @media only screen and (max-width: 800px) {
-      section {
-        position: relative;
-        max-width: 900px;
-        padding: 0 25px !important;
-        margin: auto;
-      }
-
-      .arrow-right {
-        right: -1rem !important;
-      }
-
-      .arrow-left {
-        left: -1rem !important;
-      }
-
-      .video-wrap {
-        min-height: 350px;
-        height: auto !important;
-
-      }
-    }
-
-    @media only screen and (max-width: 500px) {
-      section {
-        position: relative;
-        max-width: 900px;
-        padding: 0 20px !important;
-        margin: auto;
-      }
-
-      .faq-label {
-        padding: 15px 10px !important;
-      }
-
-      .arrow-right {
-        right: 0rem !important;
-      }
-
-      .arrow-left {
-        left: 0rem !important;
-      }
-
-      .video-wrap {
-        min-height: 150px;
-        height: auto !important;
-
-      }
-
-      .contact-left {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .contact-inner {
-        justify-content: center !important;
-        padding: 10px 15px !important;
-      }
-
-      .contact-btns {
-        flex-wrap: nowrap !important;
-      }
-
-      .contact-btn {
-        font-size: 15px !important;
-        padding: 10px 10px !important;
-      }
-
-      .video-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .video-card>img {
-        width: 70% !important;
-        height: 80% !important;
-
-      }
-
-      .videos-grid {
-        gap: 0px !important;
-        grid-template-columns: 1fr !important;
-      }
-    }
 
     /* ── HERO ── */
     .hero {
@@ -163,6 +78,7 @@
       border: 2px solid #fff;
       margin-left: -10px;
       background: #ddd;
+
     }
 
     .avatars img:first-child {
@@ -197,7 +113,7 @@
     }
 
     .desc {
-      font-size: clamp(14px, 2vw, 20px);
+      font-size: clamp(16px, 2vw, 20px);
       font-weight: 400;
       color: #444;
       line-height: 1.7;
@@ -211,7 +127,7 @@
     }
 
     .subtitle {
-      font-size: clamp(14px, 2vw, 22px);
+      font-size: clamp(16px, 2vw, 22px);
       font-weight: 500;
       color: #333;
       margin-bottom: 32px;
@@ -275,7 +191,7 @@
     }
 
     .price-new {
-      font-size: clamp(32px, 5vw, 48px);
+      font-size: clamp(30px, 5vw, 48px);
       font-weight: 700;
       color: #7b4fff;
     }
@@ -284,7 +200,7 @@
       padding: 8px 16px;
       border: 1px solid #ccc;
       border-radius: 24px;
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 500;
       color: #555;
     }
@@ -346,7 +262,7 @@
     /* ── CLIENTS ── */
     .clients-section {
       overflow: hidden;
-      margin: 40px auto 0px auto;
+      margin: 60px auto
     }
 
     .worked-with {
@@ -462,22 +378,6 @@
       border-radius: 1px;
     }
 
-    .ms-r {
-      background: #f25022;
-    }
-
-    .ms-g {
-      background: #7fba00;
-    }
-
-    .ms-b {
-      background: #00a4ef;
-    }
-
-    .ms-y {
-      background: #ffb900;
-    }
-
     /* ── GRADIENT BARS ── */
     .gradient-bar {
       background: linear-gradient(270deg, #6399ec 0%, #a961eb 100%);
@@ -493,58 +393,7 @@
       z-index: 10;
     }
 
-    @media (max-width: 1200px) {
-      .gradient-bar {
-        transform: rotate(40deg);
-        right: 40%;
-        top: 50%;
-        width: 20%
-      }
-    }
 
-    @media (max-width: 1100px) {
-      .gradient-bar {
-        transform: rotate(20deg);
-        right: 40%;
-        top: 50%;
-        width: 20%
-      }
-
-    }
-
-    @media (max-width: 1000px) {
-      .gradient-bar {
-        transform: rotate(10deg);
-        right: 40%;
-        top: 50%;
-        width: 20%
-      }
-
-      .why-card {
-        width: 100% !important;
-        height: 100% !important;
-      }
-
-      .pricing-row {
-        width: 90%;
-        min-width: auto;
-        border-radius: 40px;
-      }
-    }
-
-    @media (max-width: 950px) {
-      .gradient-bar {
-        transform: rotate(0deg);
-        right: 0%;
-        top: 0;
-        width: 50%
-      }
-
-      .why-card {
-        width: 100% !important;
-        height: 100% !important;
-      }
-    }
 
     .gradient-bar-right {
       background: linear-gradient(270deg, #6399ec 0%, #a961eb 100%);
@@ -580,7 +429,7 @@
     }
 
     .industry-tag {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       letter-spacing: 1.5px;
       color: #7b4fff;
@@ -589,7 +438,7 @@
     }
 
     .industry-heading {
-      font-size: clamp(28px, 5vw, 54px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 600;
       color: #0d0d0d;
       line-height: 1.2;
@@ -598,7 +447,7 @@
     }
 
     .industry-sub {
-      font-size: clamp(12px, 1.8vw, 16px);
+      font-size: 16px;
       color: #666;
       line-height: 1.7;
       margin: 0 auto 40px;
@@ -611,11 +460,7 @@
       gap: 20px;
     }
 
-    @media (max-width: 600px) {
-      .paths-wrapper {
-        grid-template-columns: 1fr;
-      }
-    }
+
 
     .path-card {
       border: 1.5px solid #e0e0e0;
@@ -634,7 +479,7 @@
     }
 
     .path-label1 {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.5px;
       color: #00a566;
@@ -643,7 +488,7 @@
     }
 
     .path-label2 {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.5px;
       color: #7b4fff;
@@ -652,14 +497,14 @@
     }
 
     .path-title {
-      font-size: clamp(16px, 2.5vw, 24px);
+      font-size: clamp(18px, 2.5vw, 24px);
       font-weight: 500;
       color: #0d0d0d;
       margin-bottom: 10px;
     }
 
     .path-desc {
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: 16px;
       color: #666;
       line-height: 1.6;
       margin-bottom: 18px;
@@ -676,7 +521,7 @@
       display: flex;
       align-items: flex-start;
       gap: 8px;
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: 16px;
       color: #444;
       line-height: 1.5;
     }
@@ -700,7 +545,7 @@
     }
 
     .learn-heading {
-      font-size: clamp(28px, 5vw, 56px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 600;
       color: #7b4fff;
       text-align: center;
@@ -716,21 +561,7 @@
       align-items: start;
     }
 
-    @media (max-width: 650px) {
-      .learn-grid {
-        grid-template-columns: 1fr;
-      }
 
-      .learn-image {
-        order: -1;
-      }
-
-      .learn-image img {
-        width: 100% !important;
-        height: 100% !important;
-        max-height: 15rem;
-      }
-    }
 
     .topics-list {
       display: flex;
@@ -753,7 +584,7 @@
     }
 
     .tag-text {
-      font-size: 12px;
+      font-size: clamp(14px, 1.5vw, 16px);
       color: #888;
       font-weight: 500;
       text-transform: uppercase;
@@ -771,7 +602,7 @@
     }
 
     .topic-name {
-      font-size: clamp(14px, 2vw, 24px);
+      font-size: clamp(18px, 2vw, 24px);
       font-weight: 500;
       color: #0d0d0d;
       text-transform: uppercase;
@@ -780,7 +611,7 @@
     }
 
     .topic-desc {
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: 16px;
       color: #777;
       line-height: 1.5;
     }
@@ -798,7 +629,7 @@
     }
 
     /* ── CAROUSEL ── */
-    .carousel-section {
+    /* .carousel-section {
       padding: 20px 0 40px;
       overflow: hidden;
       position: relative;
@@ -875,11 +706,92 @@
       width: 100%;
       height: 100%;
       background: #f0f0f5;
+    } */
+    /* Base styles - keep your existing ones */
+    .carousel-section {
+      padding: 20px 0 40px;
+      overflow: hidden;
+      position: relative;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .carousel-section>div {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .cards-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 500px;
+      margin-bottom: 40px;
+      overflow: visible;
+    }
+
+    .card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: absolute;
+      flex-shrink: 0;
+      background: #eee;
+      transition: all 0.3s ease;
+    }
+
+    .card-side {
+      width: 300px;
+      height: 500px;
+      background: #b3b3b3;
+      box-shadow: 0 28px 58px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .card-left {
+      left: calc(28% - 300px);
+      transform: rotate(-8deg) translateY(30px);
+    }
+
+    .card-right {
+      right: calc(28% - 300px);
+      transform: rotate(8deg) translateY(30px);
+    }
+
+    .card-center {
+      width: 300px;
+      height: 500px;
+      z-index: 3;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+    }
+
+    .card-num {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+      z-index: 2;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-blank {
+      width: 100%;
+      height: 100%;
+      background: #f0f0f5;
     }
 
     .ai-heading {
       text-align: center;
-      font-size: clamp(22px, 4vw, 34px);
+      font-size: clamp(20px, 4vw, 34px);
       font-weight: 800;
       color: #0d0d0d;
       line-height: 1.25;
@@ -889,7 +801,7 @@
 
     .ai-sub {
       text-align: center;
-      font-size: clamp(13px, 1.8vw, 15px);
+      font-size: 16px;
       color: #777;
       line-height: 1.7;
       max-width: 480px;
@@ -899,7 +811,7 @@
 
     /* ── FEATURES ── */
     .features-section {
-      margin: 0 auto 60px;
+      margin: 60px auto;
       position: relative;
     }
 
@@ -910,11 +822,7 @@
       margin: 0 auto;
     }
 
-    @media (max-width: 580px) {
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+
 
     .feature-img {
       width: 100%;
@@ -940,10 +848,10 @@
     }
 
     .feature-desc {
-      font-size: clamp(13px, 2vw, 16px);
+      font-size: 16px;
       color: #777;
       line-height: 1.65;
-      font-weight: 500;
+      font-weight: 400;
       text-align: justify;
     }
 
@@ -979,13 +887,13 @@
     /* ── BUSINESS MODEL ── */
     .biz-section {
       max-width: 900px;
-      padding: 60px 20px;
+      padding: 0 20px;
       text-align: center;
       margin: 0 auto;
     }
 
     .biz-title {
-      font-size: clamp(28px, 5vw, 56px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 600;
       color: #0d0d0d;
       margin-bottom: 16px;
@@ -993,7 +901,7 @@
     }
 
     .biz-sub {
-      font-size: clamp(14px, 1.5vw, 16px);
+      font-size: 16px;
       color: #777;
       line-height: 1.7;
       max-width: 800px;
@@ -1022,48 +930,7 @@
       z-index: 1;
     }
 
-    @media (max-width: 800px) {
-      .steps-row {
-        grid-template-columns: repeat(3, 1fr);
-      }
 
-      .why-card {
-        width: 100% !important;
-        height: 100% !important;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .steps-row {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-card {
-        width: 100% !important;
-        height: 100% !important;
-      }
-
-      .carousel-img-grad {
-        width: 50% !important;
-        height: 50% !important;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .steps-row {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .why-card {
-        width: 100% !important;
-        height: 100% !important;
-      }
-
-      .carousel-img-grad {
-        width: 50% !important;
-        height: 50% !important;
-      }
-    }
 
     .step-item {
       display: flex;
@@ -1096,7 +963,7 @@
     }
 
     .step-label {
-      font-size: clamp(14px, 1.2vw, 16px);
+      font-size: 16px;
       color: #7b4fff;
       font-weight: 500;
       text-align: center;
@@ -1123,14 +990,10 @@
       width: 100%;
       max-width: 900px;
       margin: auto;
-      padding-bottom: 8rem;
+      padding: 2rem 20px 0rem 20px;
     }
 
-    @media (max-width: 640px) {
-      .maths-inner {
-        grid-template-columns: 1fr;
-      }
-    }
+
 
     /* left card */
     .month-card {
@@ -1148,8 +1011,8 @@
     }
 
     .month-tag {
-      font-size: clamp(14px, 1.2vw, 16px);
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 600;
       letter-spacing: 1.5px;
       color: #7b4fff;
       text-transform: uppercase;
@@ -1163,7 +1026,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 0;
-      font-size: clamp(14px, 1.3vw, 16px);
+      font-size: 16px;
     }
 
     .flex {
@@ -1231,19 +1094,19 @@
     }
 
     .profit-label {
-      font-size: clamp(14px, 1.5vw, 16px);
+      font-size: 16px;
       font-weight: 700;
       color: #0d0d0d;
     }
 
     .profit-val {
-      font-size: clamp(14px, 2vw, 28px);
+      font-size: clamp(18px, 2vw, 28px);
       font-weight: 800;
       color: #00a566;
     }
 
     .month-note {
-      font-size: clamp(14px, 1.5vw, 16px);
+      font-size: 15px;
       color: #888;
       text-align: center;
       line-height: 1;
@@ -1268,7 +1131,7 @@
     }
 
     .maths-p {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 16px;
       color: #555;
       line-height: 125%;
       margin-bottom: 16px;
@@ -1280,18 +1143,20 @@
 
     .maths-section {
       position: relative;
-      background: url(./assets/Rectangle92364.png);
+      background: url(http://a8x.local/wp-content/uploads/2026/04/Rectangle-92364.png);
       background-repeat: no-repeat;
       background-size: cover;
       max-width: 100%;
       width: 100%;
       padding: 0;
+      margin: auto;
+      padding: 60px 0 !important;
     }
 
     .stackly-section {
       width: 100%;
       max-width: 100%;
-      background: url(./assets/Frame-1707480749.png);
+      background: url(http://a8x.local/wp-content/uploads/2026/04/Frame-1707480749.png);
       background-repeat: no-repeat;
       background-size: cover;
       padding-top: 3rem !important;
@@ -1343,7 +1208,7 @@
       text-align: center;
       margin-bottom: 16px;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
     /* logo icon top left */
@@ -1355,27 +1220,7 @@
       height: 130px;
     }
 
-    @media (max-width: 800px) {
-      .stackly-logo {
-        position: absolute;
-        top: 1px0;
-        left: 0;
-        width: 90px;
-        height: 90px;
-      }
-    }
 
-    @media (max-width: 500px) {
-      .stackly-logo {
-        position: absolute;
-        top: 1px0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-      }
-
-
-    }
 
     .stackly-logo>img {
       width: 100%;
@@ -1383,7 +1228,7 @@
     }
 
     .stackly-title {
-      font-size: clamp(26px, 4.5vw, 54px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 500;
       color: #0d0d0d;
       line-height: 1.2;
@@ -1395,7 +1240,7 @@
     }
 
     .stackly-sub {
-      font-size: clamp(14px, 1.3vw, 16px);
+      font-size: 16px;
       color: #555;
       line-height: 1.7;
       max-width: 755px;
@@ -1412,15 +1257,7 @@
       align-items: self-start;
     }
 
-    @media (max-width: 640px) {
-      .stackly-grid {
-        grid-template-columns: 1fr;
-      }
 
-      .stackly-images {
-        display: none;
-      }
-    }
 
     /* left: scattered images */
     .stackly-images {
@@ -1455,7 +1292,7 @@
       bottom: 4px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 7px;
+      font-size: 10px;
       font-weight: 600;
       color: #7b4fff;
       letter-spacing: 0.5px;
@@ -1494,7 +1331,7 @@
       border-top: 2px solid rgba(255, 255, 255, 0.3);
       border-bottom: 2px solid rgba(255, 255, 255, 0.3);
       color: rgba(79, 26, 239, 1);
-      font-size: 20px;
+      font-size: clamp(16px, 2vw, 20px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1529,7 +1366,7 @@
     }
 
     .acc-name {
-      font-size: clamp(14px, 1.3vw, 22px);
+      font-size: clamp(16px, 1.5vw, 22px);
       font-weight: 500;
       color: #0d0d0d;
       letter-spacing: 0.5px;
@@ -1582,7 +1419,7 @@
 
     .why-section {
       margin: 60px auto;
-      background: url(./assets/Frame1707480788.png);
+      background: url(http://a8x.local/wp-content/uploads/2026/04/Frame-1707480788.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -1602,22 +1439,7 @@
       gap: 24px;
     }
 
-    @media (max-width: 580px) {
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
 
-      .footer-logo>img {
-        height: 100%;
-        max-width: 10rem;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-    }
 
     .why-card {
       width: 100%;
@@ -1653,20 +1475,20 @@
     }
 
     .why-card-title {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 16px;
       font-weight: 700;
       color: #0d0d0d;
     }
 
     .why-card-desc {
-      font-size: clamp(14px, 1.2vw, 16px);
+      font-size: 16px;
       color: #888;
       line-height: 1.6;
     }
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
-      background: url(./assets/Frame1707481129.png);
+      background: url(http://a8x.local/wp-content/uploads/2026/04/Frame-1707481129.png);
       background-repeat: no-repeat;
       background-size: cover;
       max-width: 100%;
@@ -1848,20 +1670,19 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 13px;
       font-weight: 700;
     }
 
     .reviewer-name {
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 15px;
+      font-weight: 500;
       color: #0d0d0d;
       line-height: 1.3;
       margin: 0 !important;
     }
 
     .reviewer-opinions {
-      font-size: 11px;
+      font-size: 14px;
       color: #aaa;
     }
 
@@ -1890,19 +1711,19 @@
     }
 
     .review-date {
-      font-size: 11px;
+      font-size: 12px;
       color: #aaa;
     }
 
     .review-title {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 700;
       color: #0d0d0d;
       line-height: 1.4;
     }
 
     .review-body {
-      font-size: 12px;
+      font-size: 14px;
       color: #666;
       line-height: 1.7;
     }
@@ -1940,7 +1761,7 @@
     }
 
     .invest-title {
-      font-size: clamp(30px, 4vw, 56px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 700;
       color: #0d0d0d;
       line-height: 1.3;
@@ -1990,14 +1811,14 @@
     }
 
     .old-price {
-      font-size: 32px;
+      font-size: clamp(18px, 3vw, 32px);
       font-weight: 500;
       color: #bbb;
       text-decoration: line-through;
     }
 
     .new-price {
-      font-size: 64px;
+      font-size: clamp(30px, 5vw, 64px);
       font-weight: 600;
       color: #7b4fff;
     }
@@ -2085,7 +1906,7 @@
       color: #fff;
       border: none;
       border-radius: 48px;
-      font-size: 24px;
+      font-size: clamp(16px, 2vw, 24px);
       font-weight: 400;
       cursor: pointer;
       letter-spacing: 0.5px;
@@ -2100,7 +1921,7 @@
 
     /* ── CURRICULUM ── */
     .curriculum-section {
-      background: url(./assets/Frame1707480793123.png);
+      background: url(http://a8x.local/wp-content/uploads/2026/04/Frame-1707480793123.png);
       background-repeat: no-repeat;
       background-size: cover;
       margin: 60px auto;
@@ -2114,7 +1935,7 @@
     }
 
     .curriculum-title {
-      font-size: clamp(22px, 3.5vw, 56px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 600;
       color: #0d0d0d;
       text-align: center;
@@ -2123,7 +1944,7 @@
     }
 
     .track-title {
-      font-size: clamp(18px, 2.5vw, 40px);
+      font-size: clamp(20px, 3vw, 40px);
       font-weight: 600;
       color: #7b4fff;
       text-align: center;
@@ -2180,15 +2001,16 @@
     }
 
     .acc-icon {
-      width: 24px;
-      height: 24px;
-      border: 1.5px solid #ccc;
+      width: 40px;
+      height: 40px;
+      border: 1.5px solid rgba(245, 245, 245, 1);
+      background: rgba(245, 245, 245, 1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #777;
-      font-size: 16px;
+      font-size: 30px;
       flex-shrink: 0;
       transition: transform 0.3s, background 0.2s, border-color 0.2s;
       line-height: 1;
@@ -2204,7 +2026,7 @@
       padding: 0 20px;
       margin-top: -6px;
       margin-bottom: 6px;
-      font-size: 13px;
+      font-size: 14px;
       color: #666;
       line-height: 1.7;
     }
@@ -2233,7 +2055,7 @@
     }
 
     .acc-content>ol>li {
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: 16px;
       font-weight: 500;
     }
 
@@ -2251,17 +2073,7 @@
       gap: 16px;
     }
 
-    @media (max-width: 840px) {
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
 
-    @media (max-width: 500px) {
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-    }
 
     .stat-card {
       border: 1.5px solid #e8e8f0;
@@ -2304,13 +2116,13 @@
     }
 
     .stat-title {
-      font-size: clamp(15px, 2vw, 24px);
+      font-size: clamp(16px, 2vw, 24px);
       font-weight: 500;
       color: #0d0d0d;
     }
 
     .stat-desc {
-      font-size: clamp(14px, 1.2vw, 16px);
+      font-size: 16px;
       color: #888;
       line-height: 1.6;
     }
@@ -2326,7 +2138,7 @@
     }
 
     .faq-section {
-      background-image: url(./assets/Frame1707481242.png);
+      background-image: url(http://a8x.local/wp-content/uploads/2026/04/Frame1707481242.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       max-width: 100%;
@@ -2385,30 +2197,32 @@
       justify-content: center;
       flex-shrink: 0;
       color: #7b4fff;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       background: rgba(123, 79, 255, 0.06);
     }
 
     .faq-question {
-      font-size: clamp(15px, 2vw, 20px);
+      font-size: clamp(18px, 2vw, 20px);
       font-weight: 500;
       color: #0d0d0d;
     }
 
     .faq-toggle {
-      width: 28px;
-      height: 28px;
-      border: 1.5px solid #bbb;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #555;
-      font-size: 0;
+      font-size: 30px;
       flex-shrink: 0;
       transition: transform 0.3s ease;
       line-height: 1;
+      border: 1.5px solid rgba(245, 245, 245, 1);
+      background: rgba(245, 245, 245, 1);
+
     }
 
     .faq-toggle::before {
@@ -2421,7 +2235,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease, padding 0.3s ease;
-      font-size: clamp(12px, 1.4vw, 16px);
+      font-size: 16px;
       color: #666;
       line-height: 1.75;
       padding: 0 24px;
@@ -2459,7 +2273,7 @@
     }
 
     .faq-title {
-      font-size: clamp(30px, 6vw, 56px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 500;
       text-align: center;
       margin: 40px 0 40px 0;
@@ -2509,7 +2323,7 @@
 
 
     .contact-text {
-      font-size: clamp(13px, 1.5vw, 20px);
+      font-size: clamp(18px, 1.5vw, 20px);
       font-weight: 600;
       color: #0d0d0d;
     }
@@ -2518,6 +2332,7 @@
       font-weight: 400;
       color: #888;
       font-size: 20px;
+      text-align: center;
       display: block;
     }
 
@@ -2628,7 +2443,362 @@
       border-color: #7b4fff;
       border-top: none;
       font-size: 16px;
+    }
 
+    /* ========== BREAKPOINTS: 1400px+ (XL Desktops) ========== */
+    /* Default styles for large screens - no media query needed */
+
+    @media (max-width: 1200px) {
+      .gradient-bar {
+        transform: rotate(40deg);
+        right: 40%;
+        top: 50%;
+        width: 20%;
+      }
+    }
+
+    /* ========== BREAKPOINT: 1100px (Medium Desktops) ========== */
+    @media (max-width: 1100px) {
+      .gradient-bar {
+        transform: rotate(20deg);
+        right: 40%;
+        top: 50%;
+        width: 20%;
+      }
+    }
+
+    /* ========== BREAKPOINT: 1000px (Small Desktops / Large Tablets) ========== */
+    @media (max-width: 1024px) {
+      .card-side {
+        width: 250px;
+        height: 420px;
+      }
+
+      .card-center {
+        width: 280px;
+        height: 460px;
+      }
+
+      .card-left {
+        left: calc(25% - 250px);
+        transform: rotate(-6deg) translateY(25px);
+      }
+
+      .card-right {
+        right: calc(25% - 250px);
+        transform: rotate(6deg) translateY(25px);
+      }
+
+      .cards-row {
+        height: 460px;
+      }
+    }
+
+    /* ========== BREAKPOINT: 950px (Tablets Landscape) ========== */
+    @media (max-width: 950px) {
+      .gradient-bar {
+        transform: rotate(0deg);
+        right: 0%;
+        top: 0;
+        width: 50%;
+      }
+
+      .why-card {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    /* ========== BREAKPOINT: 840px (Tablets) ========== */
+    @media (max-width: 850px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      section {
+        position: relative;
+        max-width: 900px;
+        padding: 0 25px !important;
+        margin: auto;
+      }
+
+      .arrow-right {
+        right: -1rem !important;
+      }
+
+      .arrow-left {
+        left: -1rem !important;
+      }
+
+      .video-wrap {
+        min-height: 350px;
+        height: auto !important;
+      }
+
+      .steps-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .why-card {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .stackly-logo {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    /* Mobile Large (640px - 768px) */
+    @media (max-width: 768px) {
+      .card-side {
+        width: 200px;
+        height: 350px;
+      }
+
+      .card-center {
+        width: 240px;
+        height: 400px;
+      }
+
+      .card-left {
+        left: calc(20% - 200px);
+        transform: rotate(-4deg) translateY(20px);
+      }
+
+      .card-right {
+        right: calc(20% - 200px);
+        transform: rotate(4deg) translateY(20px);
+      }
+
+      .carousel-section>.cards-row {
+        height: 400px;
+        max-width: 500px !important;
+        margin: auto;
+      }
+
+      .gradient-bar {
+        transform: rotate(10deg);
+        right: 40%;
+        top: 50%;
+        width: 20%;
+      }
+
+      .why-card {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .pricing-row {
+        width: 90%;
+        min-width: auto;
+        border-radius: 40px;
+      }
+    }
+
+    /* ========== BREAKPOINT: 650px (Large Phones) ========== */
+    @media (max-width: 640px) {
+      .card-side {
+        width: 160px;
+        height: 280px;
+      }
+
+      .all-features-btn a {
+        width: 60%;
+      }
+
+      .card-center {
+        width: 180px;
+        height: 300px;
+      }
+
+      .card-left {
+        left: calc(22% - 160px);
+        transform: rotate(-10deg) translateY(20px);
+      }
+
+      .card-right {
+        right: calc(22% - 160px);
+        transform: rotate(10deg) translateY(20px);
+      }
+
+      .cards-row {
+        height: 340px;
+      }
+
+      .card-num {
+        font-size: 11px;
+        top: 8px;
+        left: 8px;
+      }
+
+      .learn-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .learn-image {
+        order: -1;
+      }
+
+      .learn-image img {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 15rem;
+      }
+
+      .maths-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .stackly-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stackly-images {
+        display: none;
+      }
+    }
+
+
+    /* ========== BREAKPOINT: 600px (Medium Phones) ========== */
+    @media (max-width: 600px) {
+      .paths-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .stackly-grid {
+        margin: 3rem auto 0 auto;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-logo>img {
+        height: 100%;
+        max-width: 10rem;
+      }
+    }
+
+
+    /* ========== BREAKPOINT: 500px (Small Phones) ========== */
+    @media (max-width: 500px) {
+      .all-features-btn a {
+        width: 80%;
+      }
+
+      .carousel-section {
+        padding: 20px 15px 40px;
+      }
+
+      .social-proof {
+        flex-direction: column;
+      }
+
+      .steps-row {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      section {
+        position: relative;
+        max-width: 900px;
+        padding: 0 20px !important;
+        margin: auto;
+      }
+
+      .faq-label {
+        padding: 15px 10px !important;
+      }
+
+      .arrow-right {
+        right: -1rem !important;
+      }
+
+      .arrow-left {
+        left: -1rem !important;
+      }
+
+      .video-wrap {
+        min-height: 150px;
+        height: auto !important;
+      }
+
+      .contact-left {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-inner {
+        justify-content: center !important;
+        padding: 10px 15px !important;
+      }
+
+      .contact-btns {
+        flex-wrap: nowrap !important;
+      }
+
+      .contact-btn {
+        font-size: 16px !important;
+        padding: 10px 10px !important;
+      }
+
+      .video-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .video-card>img {
+        width: 70% !important;
+        height: 80% !important;
+      }
+
+      .videos-grid {
+        gap: 0px !important;
+        grid-template-columns: 1fr !important;
+      }
+
+      .steps-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-card {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .carousel-img-grad {
+        width: 50% !important;
+        height: 50% !important;
+      }
+
+      .stackly-logo {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 50px;
+        height: 50px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========== BREAKPOINT: 380px (Very Small Phones) ========== */
+    @media (max-width: 380px) {
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -2648,11 +2818,11 @@
     <div class="hero-inner">
       <div class="social-proof">
         <div class="avatars">
-          <img src="./assets/e4f6648cc845ed5fbd08c0f96f7be87e74cd548a.jpg" alt="" />
-          <img src="./assets/02e47e5a2968b0aced7a8a88c581757b3e710e57.jpg" alt="" />
-          <img src="./assets/3f997ac88310448974cf239a72bad8ef817f985f.jpg" alt="" />
-          <img src="./assets/5aab5459786b226d5d70e39a1dfa0e817fee1e4d.jpg" alt="" />
-          <img src="./assets/f1326acd84b14d7fca1da878a3fa9ec7be74ee69.jpg" alt="" />
+          <img src="http://a8x.local/wp-content/uploads/2026/04/e4f6648cc845ed5fbd08c0f96f7be87e74cd548a.jpg" alt="" />
+          <img src="http://a8x.local/wp-content/uploads/2026/04/02e47e5a2968b0aced7a8a88c581757b3e710e57.jpg" alt="" />
+          <img src="http://a8x.local/wp-content/uploads/2026/04/3f997ac88310448974cf239a72bad8ef817f985f.jpg" alt="" />
+          <img src="http://a8x.local/wp-content/uploads/2026/04/5aab5459786b226d5d70e39a1dfa0e817fee1e4d.jpg" alt="" />
+          <img src="http://a8x.local/wp-content/uploads/2026/04/f1326acd84b14d7fca1da878a3fa9ec7be74ee69.jpg" alt="" />
 
         </div>
         <div style="display: flex; flex-direction: column;">
@@ -2711,64 +2881,73 @@
       <div class="marquee-track">
         <div class="logo-item">
           <div class="logo-amazon">
-            <!-- <img src="./assets/fcaa926748820b374106f45e547484a6c31ce700-scaled.png"
-              alt="err" /> -->
-            <img src="./assets/fcaa926748820b374106f45e547484a6c31ce700" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/fcaa926748820b374106f45e547484a6c31ce700" alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-google">
-            <img src="./assets/2e02a0a7c8c89104f9b3345465f96b94b5eae43d.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/2e02a0a7c8c89104f9b3345465f96b94b5eae43d.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-glovo">
-            <img src="./assets/f12c121eb12f52be0d13e84185206f09fc9d9faa.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/f12c121eb12f52be0d13e84185206f09fc9d9faa.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-xi">
-            <img src="./assets/e1773ad55e9f7ac096ba917d628582e3d11191f5.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/e1773ad55e9f7ac096ba917d628582e3d11191f5.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-ibm">
-            <img src="./assets/aa94046de592c23b52d657ca3dbb42ad1eed8c64.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/aa94046de592c23b52d657ca3dbb42ad1eed8c64.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-microsoft">
-            <img src="./assets/fa72918803423ad72269c64ae9782358740b648b.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/fa72918803423ad72269c64ae9782358740b648b.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-amazon">
-            <img src="./assets/fcaa926748820b374106f45e547484a6c31ce700.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/fcaa926748820b374106f45e547484a6c31ce700.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-google">
-            <img src="./assets/2e02a0a7c8c89104f9b3345465f96b94b5eae43d.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/2e02a0a7c8c89104f9b3345465f96b94b5eae43d.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-glovo">
-            <img src="./assets/f12c121eb12f52be0d13e84185206f09fc9d9faa.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/f12c121eb12f52be0d13e84185206f09fc9d9faa.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-xi">
-            <img src="./assets/e1773ad55e9f7ac096ba917d628582e3d11191f5.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/e1773ad55e9f7ac096ba917d628582e3d11191f5.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-ibm">
-            <img src="./assets/aa94046de592c23b52d657ca3dbb42ad1eed8c64.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/aa94046de592c23b52d657ca3dbb42ad1eed8c64.png"
+              alt="err" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-microsoft">
-            <img src="./assets/fa72918803423ad72269c64ae9782358740b648b-scaled.png" alt="err" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/fa72918803423ad72269c64ae9782358740b648b-scaled.png"
+              alt="err" />
           </div>
         </div>
       </div>
@@ -2914,7 +3093,8 @@
           </div>
         </div>
         <div class="learn-image">
-          <img src="./assets/d6608c7cf65fae381c1fbb9e7c2b83637fb8f3f0.jpg" alt="err" />
+          <img src="http://a8x.local/wp-content/uploads/2026/04/d6608c7cf65fae381c1fbb9e7c2b83637fb8f3f0.jpg"
+            alt="err" />
         </div>
       </div>
     </div>
@@ -2933,7 +3113,8 @@
         </div>
         <div class="card card-center">
           <span class="card-num">02</span><img class="card-img"
-            src="./assets/8096c4f0d276e94c57da5c3a9b0f74e26823974a.png" alt="AI Avatar" />
+            src="http://a8x.local/wp-content/uploads/2026/04/8096c4f0d276e94c57da5c3a9b0f74e26823974a.png"
+            alt="AI Avatar" />
         </div>
         <div class="card card-side card-right">
           <span class="card-num">03</span>
@@ -3011,7 +3192,7 @@
         The most powerful creative AI platforms in the world. We teach you all
         of them.
       </h2>
-      <img src="./assets/Frame 1707480793.png" alt="AI Platforms" />
+      <img src="http://a8x.local/wp-content/uploads/2026/04/Frame-1707480793.png" alt="AI Platforms" />
     </div>
   </section>
 
@@ -3137,7 +3318,7 @@
     <div class="stackly-div">
       <!-- logo top left -->
       <div class="stackly-logo">
-        <img src="./assets/8afbe86284e39662554c557d1d0a58a6075aaab9.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/8afbe86284e39662554c557d1d0a58a6075aaab9.png" alt="err" />
       </div>
 
       <!-- badge -->
@@ -3162,7 +3343,7 @@
     <div class="stackly-grid">
       <!-- left: scattered images -->
       <div class="stackly-images">
-        <img src="./assets/Frame 1707481018.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/Frame-1707481018.png" alt="err" />
       </div>
 
       <!-- right: features accordion -->
@@ -3389,36 +3570,36 @@
     <h2 class="testimonials-title">
       They started exactly where you are now.
     </h2>
-    <img src="./assets/Ellipse 40.png" class="carousel-img-grad" alt="err" />
-    <img src="./assets/Ellipse 39.png" class="carousel-img-grad-2" alt="err" />
+    <img src="http://a8x.local/wp-content/uploads/2026/04/Ellipse-40.png" class="carousel-img-grad" alt="err" />
+    <img src="http://a8x.local/wp-content/uploads/2026/04/Ellipse-39.png" class="carousel-img-grad-2" alt="err" />
     <div class="videos-grid">
 
 
 
       <div class="video-card">
 
-        <img src="./assets/57358d618f009bfd2226e5432569bfeadf47d9e4.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/57358d618f009bfd2226e5432569bfeadf47d9e4.png" alt="err" />
       </div>
 
       <div class="video-card">
 
-        <img src="./assets/8ec4d0f264ee1cf1a63b76fad7bc777ea72dca7f.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/8ec4d0f264ee1cf1a63b76fad7bc777ea72dca7f.png" alt="err" />
       </div>
 
       <div class="video-card">
-        <img src="./assets/c2d5e80800f8ab9d774aeae31b8776c10d12348d.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/c2d5e80800f8ab9d774aeae31b8776c10d12348d.png" alt="err" />
       </div>
 
       <div class="video-card">
-        <img src="./assets/Frame 1707480793as.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/Frame-1707480793as.png" alt="err" />
       </div>
 
       <div class="video-card">
-        <img src="./assets/4689eaaca80cd596430d96c68a3e7f64410abfb7.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/4689eaaca80cd596430d96c68a3e7f64410abfb7.png" alt="err" />
       </div>
 
       <div class="video-card">
-        <img src="./assets/67f0fe3ffba60057461fa760591da61d4405499c.png" alt="err" />
+        <img src="http://a8x.local/wp-content/uploads/2026/04/67f0fe3ffba60057461fa760591da61d4405499c.png" alt="err" />
       </div>
     </div>
     </div>
@@ -3447,7 +3628,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/91f76466b3a3ada376feeaa1251109ca7a9b6fcc.png" alt="err" class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/91f76466b3a3ada376feeaa1251109ca7a9b6fcc.png"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Juan Carlos García López</p>
@@ -3468,7 +3650,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/Frame 1707480793.png" alt="err" class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/Frame-1707480793-1.png" alt="err"
+                  class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Sofia Delgado Navarro</p>
@@ -3489,7 +3672,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/3f43e02e9c64bdb043d2efbff7200d864a76378b.png" alt="err" class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/3f43e02e9c64bdb043d2efbff7200d864a76378b.png"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Carlos Herrera Vega</p>
@@ -3510,7 +3694,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/f380be87fe589866c629582d7494a3d1d5bc38e8.png" alt="err" class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/f380be87fe589866c629582d7494a3d1d5bc38e8.png"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Lucia Romero Castillo</p>
@@ -3531,8 +3716,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/8096c4f0d276e94c57da5c3a9b0f74e26823974a-1.png" alt="err"
-                  class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/3f43e02e9c64bdb043d2efbff7200d864a76378b.png"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Miguel González Ruiz</p>
@@ -3553,8 +3738,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/d6608c7cf65fae381c1fbb9e7c2b83637fb8f3f0-scaled.jpg" alt="err"
-                  class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/e4f6648cc845ed5fbd08c0f96f7be87e74cd548a.jpg"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Ana Pérez Morales</p>
@@ -3575,7 +3760,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/147371de1d7ec008bc2975689f3bf7b7ff752555.png" alt="err" class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/f1326acd84b14d7fca1da878a3fa9ec7be74ee69.jpg"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Roberto Méndez Torres</p>
@@ -3596,7 +3782,8 @@
           <div class="review-card">
             <div class="reviewer">
               <div class="reviewer-avatar">
-                <img src="./assets/reviews/3405e5567f017e15cc06566501c07b90a4a2e00e.png" alt="err" class="caruselimg" />
+                <img src="http://a8x.local/wp-content/uploads/2026/04/02e47e5a2968b0aced7a8a88c581757b3e710e57.jpg"
+                  alt="err" class="caruselimg" />
               </div>
               <div>
                 <p class="reviewer-name">Elena Vázquez Jiménez</p>
@@ -3798,7 +3985,7 @@
           </label>
           <div class="acc-content">
             <p
-              style="font-size:11px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
+              style="font-size:12px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
               Classes</p>
             <ol style="padding-left:16px;display:flex;flex-direction:column;gap:6px;">
               <li>Welcome to the course and overview</li>
@@ -3870,7 +4057,7 @@
           </label>
           <div class="acc-content">
             <p
-              style="font-size:11px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
+              style="font-size:12px;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
               Classes</p>
             <ol style="padding-left:16px;display:flex;flex-direction:column;gap:6px;">
               <li>Welcome to the course and overview</li>
@@ -4071,7 +4258,7 @@
       <div class="contact-inner">
         <div class="contact-left">
           <div class="contact-avatars">
-            <img src="./assets/Frame 1707480790.png" alt="" />
+            <img src="http://a8x.local/wp-content/uploads/2026/04/Frame-1707480790.png" alt="" />
 
           </div>
           <div class="contact-text">
@@ -4120,7 +4307,7 @@
   <!-- ── FOOTER ── -->
   <footer class="footer-section">
     <div class="footer-logo">
-      <img src="./assets/080d6cadffb7a8b893457f60e49fcbdb97881cec.png" alt="err" />
+      <img src="http://a8x.local/wp-content/uploads/2026/04/expertus-4.png" alt="err" />
     </div>
 
     <div class="footer-links">
