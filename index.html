@@ -85,7 +85,7 @@
       border: 2px solid #fff;
       margin-left: -10px;
       background: #ddd;
-
+      object-fit: cover
     }
 
     .avatars img:first-child {
@@ -886,6 +886,7 @@
       padding: 0 20px;
       text-align: center;
       margin: 0 auto;
+
     }
 
     .biz-title {
@@ -902,10 +903,12 @@
       line-height: 1.7;
       max-width: 800px;
       margin: 0 auto 48px;
+
     }
 
     /* steps row */
     .steps-row {
+      overflow: hidden;
       position: relative;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -920,11 +923,34 @@
 
     .steps-line {
       position: absolute;
-      width: 100%;
       height: 1px;
       background-color: #c5b8ff;
-      bottom: 4.6rem;
+      bottom: 12px;
+      width: 300vw;
       z-index: 1;
+      left: -300px;
+    }
+
+    .steps-line2 {
+      position: absolute;
+      height: 1px;
+      background-color: #c5b8ff;
+      bottom: 12px;
+      width: 300vw;
+      z-index: 1;
+      left: -300px;
+      visibility: hidden;
+    }
+
+    .steps-line3 {
+      position: absolute;
+      height: 1px;
+      background-color: #c5b8ff;
+      bottom: 12px;
+      width: 300vw;
+      z-index: 1;
+      left: -300px;
+      visibility: hidden;
     }
 
 
@@ -945,8 +971,10 @@
     }
 
     .step-num {
-      width: 28px;
-      height: 28px;
+
+      position: relative;
+      width: 28px !important;
+      height: 28px !important;
       border: 1.5px solid #c5b8ff;
       background-color: #c5b8ff;
       border-radius: 50%;
@@ -956,7 +984,7 @@
       font-size: 12px;
       color: #7b4fff;
       font-weight: 500;
-      z-index: 2;
+      z-index: 3;
       position: relative;
     }
 
@@ -988,7 +1016,7 @@
       width: 100%;
       max-width: 950px;
       margin: auto;
-      padding: 2rem 20px 0rem 20px;
+      padding: 4rem 20px 2rem 20px;
     }
 
 
@@ -1147,7 +1175,6 @@
       background-size: cover;
       max-width: 100%;
       width: 100%;
-      padding: 0;
       margin: auto;
       padding: 60px 0 !important;
     }
@@ -2561,6 +2588,17 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .steps-line3 {
+        position: absolute;
+        height: 1px;
+        background-color: #c5b8ff;
+        bottom: 12px;
+        width: 300vw;
+        z-index: 1;
+        left: -600px;
+        visibility: visible;
+      }
+
       .path-list li {
         max-width: 100%;
       }
@@ -2592,6 +2630,8 @@
       .steps-row {
         grid-template-columns: repeat(3, 1fr);
       }
+
+
 
       .why-card {
         width: 100% !important;
@@ -2776,6 +2816,21 @@
     @media (max-width: 500px) {
       .all-features-btn a {
         width: 80%;
+      }
+
+      .maths-inner {
+        padding: 2rem 20px 0rem 20px;
+      }
+
+      .steps-line2 {
+        position: absolute;
+        height: 1px;
+        background-color: #c5b8ff;
+        bottom: 12px;
+        width: 300vw;
+        z-index: 1;
+        left: -300px;
+        visibility: visible;
       }
 
       .carousel-section {
@@ -3135,7 +3190,7 @@
           <p class="path-desc">
             You want to create <strong> scroll </strong> stopping content that builds an audience, opens doors to brand
             deals,
-            sponsorships, paid collaborations or monetising through the launch of your own digital product <strong>
+            sponsorships, paid collaborations or monetises through the launch of your own digital product <strong>
               without
               showing your face.</strong>
           </p>
@@ -3324,10 +3379,15 @@
       </p>
 
       <div class="steps-row">
-        <div class="steps-line"></div>
+
+
+
         <div class="step-item">
           <div class="step-card"></div>
-          <div class="step-num">1</div>
+          <div class="step-num">
+            <div class="steps-line"></div>
+            1
+          </div>
           <div class="step-label">Architecture</div>
         </div>
         <div class="step-item">
@@ -3340,7 +3400,10 @@
         </div>
         <div class="step-item">
           <div class="step-card"></div>
-          <div class="step-num">3</div>
+          <div class="step-num">
+            <div class="steps-line2"></div>
+            3
+          </div>
           <div class="step-label">
             Service<br />
             Delivery
@@ -3356,7 +3419,10 @@
         </div>
         <div class="step-item">
           <div class="step-card"></div>
-          <div class="step-num">5</div>
+          <div class="step-num">
+            <div class="steps-line3"></div>
+            5
+          </div>
           <div class="step-label">
             Scale<br />
             Systems
@@ -3380,21 +3446,18 @@
           <span class="month-val green">€850</span>
         </div>
 
-        <hr class="month-divider" />
 
         <div class="month-row flex justifyBetween">
           <span class="month-label">Your AI tool costs*</span>
           <span class="month-val red">-€4</span>
         </div>
 
-        <hr class="month-divider" />
 
         <div class="month-row flex justifyBetween">
           <span class="month-label">Your time per week</span>
           <span class="month-val">~3 hrs</span>
         </div>
 
-        <hr class="month-divider" />
         <hr class="month-spacer" />
         <div class="month-profit-row flex justifyBetween">
           <span class="profit-label">Your monthly profit</span>
@@ -3440,7 +3503,7 @@
       </div>
 
       <!-- badge -->
-      <div class="worth-badge"><span>Worth $596</span></div>
+      <div class="worth-badge"><span>WORHT $596</span></div>
 
       <!-- heading -->
       <div class="stackly-header">
@@ -4169,10 +4232,10 @@
       <!-- pricing card -->
       <div class="pricing-card">
         <div class="pricing-card-inner">
-          <p class="card-tag">Creative AI Mastery · AI Business Model</p>
+          <p class="card-tag">Creative AI Mastery + AI Business Model</p>
 
           <div class="card-prices">
-            <span class="old-price">€598</span>
+            <span class="old-price">€498</span>
             <span class="new-price">€47</span>
           </div>
 
