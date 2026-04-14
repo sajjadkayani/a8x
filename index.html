@@ -116,29 +116,28 @@
     }
 
     h1 .purple {
-      color: #7b4fff;
+      color: #8C5EFF;
     }
 
     .desc {
       font-size: clamp(16px, 2vw, 20px);
       font-weight: 400;
-      color: #444;
+      color: #000;
       line-height: 1.7;
       margin-bottom: 20px;
       max-width: 1200px;
     }
 
     .desc .purple {
-      color: #7b4fff;
+      color: #4F1AEF;
       font-weight: 600;
     }
 
     .subtitle {
       font-size: clamp(16px, 2vw, 22px);
       font-weight: 500;
-      color: #333;
+      color: #000;
       margin-bottom: 32px;
-      max-width: 800px;
     }
 
     .btn-access {
@@ -210,12 +209,11 @@
 
     .pricing-row .badge {
       padding: 8px 16px;
-      border: 1px solid #cccccc2c;
       border-radius: 24px;
       font-size: 12px;
       font-weight: 500;
       color: #555;
-      background: #f3f2f961;
+      background: #d6d5da5b;
 
     }
 
@@ -295,10 +293,29 @@
       overflow: hidden;
     }
 
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .marquee-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, white, transparent);
+    }
+
+    .marquee-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, white, transparent);
+    }
+
     .marquee-track {
       display: flex;
       align-items: center;
-      gap: 70px;
       width: max-content;
       animation: marquee 18s linear infinite;
     }
@@ -307,13 +324,23 @@
       animation-play-state: paused;
     }
 
+    .logo-item {
+      margin-right: 70px;
+      /* instead of gap */
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
     @keyframes marquee {
       0% {
         transform: translateX(0);
       }
 
       100% {
-        transform: translateX(-50%);
+        transform: translateX(-33.33%);
       }
     }
 
@@ -438,8 +465,7 @@
     .industry-tag {
       font-size: 14px;
       font-weight: 600;
-      letter-spacing: 1.5px;
-      color: #7b4fff;
+      color: #4F1AEF;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
@@ -447,7 +473,7 @@
     .industry-heading {
       font-size: clamp(32px, 5vw, 56px);
       font-weight: 600;
-      color: #0d0d0d;
+      color: #000;
       line-height: 1.2;
       max-width: 1200px;
       margin: 0 auto 20px;
@@ -483,7 +509,7 @@
     }
 
     .path-card.path2 {
-      border-top: 4px solid #7b4fff;
+      border-top: 4px solid #21B382;
     }
 
     .path-card.path3 {
@@ -496,7 +522,7 @@
     }
 
     .path-card.path1 {
-      border-top: 4px solid #00a566;
+      border-top: 4px solid #1A5AEF;
       box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.06);
 
     }
@@ -505,7 +531,7 @@
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.5px;
-      color: #00a566;
+      color: #1A5AEF;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
@@ -514,7 +540,7 @@
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.5px;
-      color: #7b4fff;
+      color: #21B382;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
@@ -537,7 +563,7 @@
 
     .path-desc {
       font-size: 14px;
-      color: #666;
+      color: #6F6F6F;
       line-height: 1.6;
       margin-bottom: 18px;
     }
@@ -555,7 +581,7 @@
       gap: 8px;
       font-weight: 500;
       font-size: 16px;
-      color: #444;
+      color: #6F6F6F;
       line-height: 1.5;
       max-width: 369px;
       letter-spacing: 0px;
@@ -570,13 +596,13 @@
     }
 
     .check-gray {
-      color: #00a566;
+      color: #1A5AEF;
       background-color: #00a5660e;
     }
 
     .check-purple {
-      background-color: #7b4fff0c;
-      color: #7b4fff;
+      background-color: #ECFBF6;
+      color: #21B382;
     }
 
     .check-yellow {
@@ -587,7 +613,7 @@
     .learn-heading {
       font-size: clamp(32px, 5vw, 56px);
       font-weight: 600;
-      color: #7b4fff;
+      color: #8C5EFF;
       text-align: center;
       line-height: 114.99999999999999%;
       margin: 60px 0 48px;
@@ -627,7 +653,7 @@
 
     .tag-text {
       font-size: clamp(14px, 1.5vw, 16px);
-      color: #888;
+      color: #000;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -789,7 +815,7 @@
     .ai-sub {
       text-align: center;
       font-size: 16px;
-      color: #777;
+      color: #000;
       line-height: 1.7;
       max-width: 700px;
       margin: 0 auto 60px;
@@ -815,10 +841,15 @@
     .features-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 60px;
       margin: 0 auto;
     }
 
+    .feature-item {
+      padding: 25px;
+      border: 1px solid #F4F4F4;
+      border-radius: 16px;
+    }
 
 
     .feature-img {
@@ -833,8 +864,13 @@
     .feature-img-inner {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #ddd8f0 0%, #c8c0e8 100%);
       border-radius: 12px;
+    }
+
+    .feature-img-inner video {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
     }
 
     .feature-title {
@@ -846,14 +882,18 @@
 
     .feature-desc {
       font-size: 16px;
-      color: #777;
-      line-height: 1.65;
+      color: #6F6F6F;
+      line-height: 1.2;
       font-weight: 400;
       text-align: justify;
     }
 
     /* ── CIRCLE SECTION ── */
     .sectoin-circle {
+      background-image: url(./assets/Background.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
       padding: 3rem 0 0;
       text-align: center;
       max-width: 100% !important;
@@ -873,10 +913,10 @@
       font-size: clamp(25px, 3vw, 40px);
     }
 
-    .sectoin-circle img {
+    .circle-img {
       height: auto;
       width: 100%;
-      max-width: 1200px;
+      max-width: 900px;
       display: block;
       margin: 0 auto;
     }
@@ -899,7 +939,7 @@
 
     .biz-sub {
       font-size: 16px;
-      color: #777;
+      color: #000;
       line-height: 1.7;
       max-width: 800px;
       margin: 0 auto 48px;
@@ -912,10 +952,10 @@
       position: relative;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
+      padding: 16px;
       gap: 50px;
-      margin-bottom: 16px;
       max-width: 1290px;
-      margin: auto;
+      margin: auto auto 16px auto;
       min-height: 368.64px;
       opacity: 1;
       border-radius: 12px;
@@ -962,9 +1002,45 @@
       gap: 10px;
     }
 
+    .step-item-1 .step-card {
+      background-image: url(./assets/Frame1707481282.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .step-item-2 .step-card {
+      background-image: url(./assets/Frame1707481282.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .step-item-3 .step-card {
+      background-image: url(./assets/Frame1707481285.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .step-item-4 .step-card {
+      background-image: url(./assets/ClientManagement.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .step-item-5 .step-card {
+      background-image: url(./assets/ExpertusSecrets.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .step-item-6 .step-card {
+      background-image: url(./assets/10xStrategy.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
     .step-card {
       width: 100%;
-      height: 80%;
+      height: 60%;
       min-height: 190px;
       background: #e8e8ec;
       border-radius: 12px;
@@ -993,7 +1069,6 @@
       color: #7b4fff;
       font-weight: 500;
       text-align: center;
-      background: #f0ebff;
       border-radius: 8px;
       padding: 6px 10px;
       width: 100%;
@@ -1004,6 +1079,9 @@
       align-items: center;
       text-align: center;
       height: 4rem;
+      background: #8C5EFF1A;
+      border: 1px solid rgba(255, 255, 255, 0.452);
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     }
 
     /* ── MATHS SECTION ── */
@@ -1040,8 +1118,7 @@
     .month-tag {
       font-size: 16px;
       font-weight: 600;
-      letter-spacing: 1.5px;
-      color: #7b4fff;
+      color: #4F1AEF;
       text-transform: uppercase;
       margin-bottom: 24px;
     }
@@ -1171,7 +1248,7 @@
     .maths-section {
       position: relative;
       /* background: url(http://a8x.local/wp-content/uploads/2026/04/Rectangle-92364.png); */
-      background: url(./assets/Rectangle92364.png);
+      background: url(./assets/buisnessimg.png);
       background-repeat: no-repeat;
       background-size: cover;
       max-width: 100%;
@@ -1349,17 +1426,16 @@
       height: 56px;
       top: 40px;
       left: 536px;
+      max-width: 457px;
       opacity: 1;
       gap: 10px;
       text-align: center;
       border-radius: 38px;
-      /* From https://css.glass */
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
       background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
-      border-top: 2px solid rgba(255, 255, 255, 0.3);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
       color: rgba(79, 26, 239, 1);
       font-size: clamp(16px, 2vw, 20px);
       display: flex;
@@ -1370,6 +1446,9 @@
       background: rgba(255, 255, 255, 0.3);
       transition: background 0.2s;
       padding: 0 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 18px 15px 23px -31px rgba(0, 0, 0, 0.75) inset;
+      -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 18px 15px 23px -31px rgba(0, 0, 0, 0.75) inset;
+      -moz-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 18px 15px 23px -31px rgba(0, 0, 0, 0.75) inset;
     }
 
     .all-features-btn a:hover {
@@ -1395,7 +1474,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
+      padding: 18px;
       border-bottom: 1px solid rgba(238, 231, 255, 1);
       cursor: pointer;
       gap: 12px;
@@ -1474,6 +1553,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+      padding-bottom: 16px;
     }
 
 
@@ -1493,9 +1573,8 @@
           rgba(255, 255, 255, 0.2) 100%);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
-      border-top: 2px solid rgba(255, 255, 255, 0.3);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0px 0px 8px 0px rgba(79, 26, 239, 0.25);
+      border: 4px solid rgba(255, 255, 255, 0.199);
+      box-shadow: 0 0 8px rgba(79, 26, 239, 0.25);
     }
 
     .why-icon {
@@ -1904,8 +1983,7 @@
     }
 
     .second-innner {
-      background: #6f36ff;
-      background: linear-gradient(191deg, rgba(127, 78, 252, 0.062) 0%, rgba(140, 94, 255, 0.356) 100%);
+      background: linear-gradient(191deg, rgba(127, 78, 252, 0.10) 0%, rgba(140, 94, 255, 0.356) 100%);
       padding: 2rem;
       border-radius: 0 0 20px 20px;
     }
@@ -1971,16 +2049,17 @@
     /* ── CURRICULUM ── */
     .curriculum-section {
       /* background: url(http://a8x.local/wp-content/uploads/2026/04/Frame-1707480793123.png); */
-      background: url(./assets/Frame1707480793123.png);
+      background: url(./assets/Backgroundfaq.png);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       margin: auto;
       max-width: 100%;
     }
 
     .acc-item {
       background: white;
-      padding: 0 10px;
+
       border-radius: 12px;
     }
 
@@ -2064,7 +2143,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #777;
+      color: #6F6F6F;
       font-size: 30px;
       flex-shrink: 0;
       transition: transform 0.3s, background 0.2s, border-color 0.2s;
@@ -2191,7 +2270,7 @@
 
     .faq-section {
       /* background-image: url(http://a8x.local/wp-content/uploads/2026/04/Frame1707481242.png); */
-      background-image: url(./assets/Frame1707481242.png);
+      background-image: url(./assets/Backgroundfaq.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       max-width: 100%;
@@ -2248,16 +2327,10 @@
     .faq-q-icon {
       width: 30px;
       height: 30px;
-      border-radius: 50%;
-      border: 1.5px solid #d0c0ff;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
-      color: #7b4fff;
-      font-size: 14px;
-      font-weight: 700;
-      background: rgba(123, 79, 255, 0.06);
+
     }
 
     .faq-question {
@@ -2323,10 +2396,6 @@
       opacity: 100% !important;
     }
 
-    .faq-item.highlight .faq-q-icon {
-      background: #ede5ff;
-      border-color: #c0a8ff;
-    }
 
     .faq-title {
       font-size: clamp(32px, 5vw, 56px);
@@ -2495,12 +2564,14 @@
     /* When open, use a very large value as fallback */
     .acc-item input:checked~.acc-content {
       max-height: none !important;
-      padding: 14px 20px 16px;
+      padding: 20px;
+      height: 100% !important;
       border-color: #7b4fff;
       border-top: none;
       font-size: 16px;
       opacity: 100% !important;
       text-align: start;
+      transition: max-height 0.3s ease, padding 0.3s ease;
     }
 
     /* ========== BREAKPOINTS: 1400px+ (XL Desktops) ========== */
@@ -2788,7 +2859,14 @@
 
     /* ========== BREAKPOINT: 600px (Medium Phones) ========== */
     @media (max-width: 600px) {
+      .invest-section {
 
+        padding-top: 40px !important;
+      }
+
+      .reviews-section {
+        padding-top: 40px !important;
+      }
 
       .path-card.path3 li {
         max-width: 100%;
@@ -2940,12 +3018,38 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .top-sec {
+      padding: 0 !important;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .top-bar {
+      width: 100%;
+      background: rgba(79, 26, 239, 1);
+      padding: 10px;
+
+    }
+
+    .top-bar p {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+    }
   </style>
 </head>
 
 <body>
+  <section class="top-sec">
+    <div class="top-bar">
+      <p>SPECIAL LIMITED OFFER. ONE-TIME PAYMENT. ENDS SOON</p>
+    </div>
+  </section>
   <!-- ── HERO ── -->
   <section class="hero">
+
     <div>
       <img src="./assets/080d6cadffb7a8b893457f60e49fcbdb97881cec.png" alt="err"
         style="max-height:56px ; max-width: 220.92px; height: 100%; width: 100%; margin: 20px auto  30px auto;" />
@@ -2964,11 +3068,17 @@
     <div class="hero-inner">
       <div class="social-proof">
         <div class="avatars">
-          <img src="./assets/e4f6648cc845ed5fbd08c0f96f7be87e74cd548a.jpg" alt="" />
-          <img src="./assets/02e47e5a2968b0aced7a8a88c581757b3e710e57.jpg" alt="" />
-          <img src="./assets/3f997ac88310448974cf239a72bad8ef817f985f.jpg" alt="" />
-          <img src="./assets/5aab5459786b226d5d70e39a1dfa0e817fee1e4d.jpg" alt="" />
-          <img src="./assets/f1326acd84b14d7fca1da878a3fa9ec7be74ee69.jpg" alt="" />
+          <img src="./assets/e4f6648cc845ed5fbd08c0f96f7be87e74cd548a.jpg" alt="" loading="lazy" width="800"
+            height="600" />
+          <img src="./assets/02e47e5a2968b0aced7a8a88c581757b3e710e57.jpg" alt="" loading="lazy" width="800"
+            height="600" />
+          <img src="./assets/3f997ac88310448974cf239a72bad8ef817f985f.jpg" alt="" loading="lazy" width="800"
+            height="600" />
+          <img src="./assets/5aab5459786b226d5d70e39a1dfa0e817fee1e4d.jpg" alt="" loading="lazy" width="800"
+            height="600" />
+          <img src="./assets/f1326acd84b14d7fca1da878a3fa9ec7be74ee69.jpg" alt="" loading="lazy" width="800"
+            height="600" />
+
 
         </div>
         <div style="display: flex; flex-direction: column;">
@@ -3026,6 +3136,7 @@
     <p class="worked-with">Our team have worked with</p>
     <div class="marquee-wrapper">
       <div class="marquee-track">
+        <!-- set 1 -->
         <div class="logo-item">
           <div class="logo-amazon">
             <img src="./assets/fcaa926748820b374106f45e547484a6c31ce700.png" alt="err" />
@@ -3056,6 +3167,7 @@
             <img src="./assets/fa72918803423ad72269c64ae9782358740b648b.png" alt="err" />
           </div>
         </div>
+        <!-- set 2 -->
         <div class="logo-item">
           <div class="logo-amazon">
             <img src="./assets/fcaa926748820b374106f45e547484a6c31ce700.png" alt="err" />
@@ -3083,7 +3195,38 @@
         </div>
         <div class="logo-item">
           <div class="logo-microsoft">
-            <img src="./assets/fa72918803423ad72269c64ae9782358740b648bscaled.png" alt="err" />
+            <img src="./assets/fa72918803423ad72269c64ae9782358740b648b.png" alt="err" />
+          </div>
+        </div>
+        <!-- set 3 — needed if screen is wider than one set -->
+        <div class="logo-item">
+          <div class="logo-amazon">
+            <img src="./assets/fcaa926748820b374106f45e547484a6c31ce700.png" alt="err" />
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-google">
+            <img src="./assets/2e02a0a7c8c89104f9b3345465f96b94b5eae43d.png" alt="err" />
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-glovo">
+            <img src="./assets/f12c121eb12f52be0d13e84185206f09fc9d9faa.png" alt="err" />
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-xi">
+            <img src="./assets/e1773ad55e9f7ac096ba917d628582e3d11191f5.png" alt="err" />
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-ibm">
+            <img src="./assets/aa94046de592c23b52d657ca3dbb42ad1eed8c64.png" alt="err" />
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-microsoft">
+            <img src="./assets/fa72918803423ad72269c64ae9782358740b648b.png" alt="err" />
           </div>
         </div>
       </div>
@@ -3118,27 +3261,27 @@
             <ul class="path-list">
               <li>
                 <svg class="check check-gray" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#00a566" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#1A5AEF" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Learn the AI skills that companies are hiring for right now
               </li>
               <li>
                 <svg class="check check-gray" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#00a566" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#1A5AEF" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Build a portfolio with our software that proves you can
                 deliver professional grade work
               </li>
               <li>
                 <svg class="check check-gray" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#00a566" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#1A5AEF" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Start freelancing within weeks while you develop your
                 expertise
               </li>
               <li>
                 <svg class="check check-gray" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#00a566" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#1A5AEF" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Start positioning yourself for remote AI roles in high-demand
                 that didn't exist 12 months ago
@@ -3156,28 +3299,28 @@
             <ul class="path-list">
               <li>
                 <svg class="check check-purple" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#7b4fff" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#21B382" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Master the creative AI toolkit that businesses will pay
                 thousands for
               </li>
               <li>
                 <svg class="check check-purple" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#7b4fff" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#21B382" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Get the exact system to package, price, and sell AI services
                 to SMEs
               </li>
               <li>
                 <svg class="check check-purple" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#7b4fff" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#21B382" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Use our proven client acquisition system to get high paying
                 clients without spending money on ads
               </li>
               <li>
                 <svg class="check check-purple" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#7b4fff" stroke-width="1.5" stroke-linecap="round"
+                  <path d="M5 8l2 2 4-4" stroke="#21B382" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>Operate like a professional agency from day one with included
                 software
@@ -3189,11 +3332,10 @@
           <p class="path-label3">PATH 3</p>
           <h3 class="path-title">Content Creator</h3>
           <p class="path-desc">
-            You want to create <strong> scroll </strong> stopping content that builds an audience, opens doors to brand
-            deals,
-            sponsorships, paid collaborations or monetises through the launch of your own digital product <strong>
-              without
-              showing your face.</strong>
+            You want to create <strong>scroll</strong> stopping content that builds an audience, opens doors to brand
+            deals, sponsorships, paid collaborations or monetises through the launch of your own digital product
+            <strong> without showing your face.</strong>
+
           </p>
           <ul class="path-list">
             <li>
@@ -3281,17 +3423,30 @@
       <div class="cards-row">
         <div class="card card-side card-left">
           <div class="carousel-section-backdrop"></div>
-          <span class="card-num">01</span>
+
           <div class="card-blank"></div>
         </div>
         <div class="card card-center">
-          <span class="card-num">02</span><img class="card-img"
-            src="./assets/8096c4f0d276e94c57da5c3a9b0f74e26823974a.png" alt="AI Avatar" />
+
+          <video autoplay muted loop playsinline class="card-img">
+            <source
+              src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/video%20para%20landing%20corregido%20-%2019%20-%2003%20-%202026.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAU6GD22XVHPL43OJJ%2F20260414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260414T161344Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCybqB89UUZZpeKzZhdI8B%2BIb%2FulSbtxcZva8oYu%2Bq1EQIgUx8xTK%2BcaNNAtb28P5ztb0%2F%2Bj%2FxvtOvu2fOKNLDeOpUq9gIIkf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwzMzk3MTMxMTk3MjIiDHSy4iJ0gWN3qThdiirKAioyTpTVI09kXK65oVpcE%2BKVoQjSEXka9v1Ce5ePb04RpU7lYiwXp%2BBPnXssWJfLmZ7bVRlNdbXHvngiARYEXiGJVxHy9IRnCsjtb2L0vPpvsTflBN21hWOm0XigV5s7k57o6L054zDVW5kd0EfLzsiguRj1NjXKsCbnY0g7pZF7Zmc9%2BYS0uvL7laIMKyUIqsr19GvRGcnMx%2FVh9oJSCWjkB1GeBIkzrH%2B9zik2Trc%2FZgwE1cJt%2Fh%2BzfaV%2BK4O%2Fjly5CFnwEUV3ax1mmKQnOGE%2F3Pv3zKQxaY9OlgHXS8jm%2BB3UlFYlUlrdfKJPxp35T8MtLmuFeJDkNp%2FZad5FiBDonpqgto5mmbhfU8gZWZjlY%2Flf1%2FEyXMly45Oizhm%2FxC3LLV6wS%2BdRowrABk5De5acq%2F5Y3H4UwmL2v74bII%2BCiFQ%2BN5%2F1rmXsxTCmy%2FnOBjqtAm9F3hVAX4FaVa2V6Vw10RwwqiR6e7EiDhT2HurR4GS0Yc4egiLnaM6YlG%2BTdn4iNf7M1S6Du22G4FrP1%2BtJ1Qr5cBurpKWydNt08XEacDiv4hWie9CNr4zAwlvl6vLxa%2F3CXQoccfTj5Bu6BQvTIIxruvYbxfbEe%2FeEO9kShyAg8PWNBwzsrcWnIfJ%2Bcu5CGkQM4gfUleHepcZDh%2FLEvmPEHJSRiurt3NofHkX2qWSpkl7xtwErF8UfsL7limKYRgcLYCoM6cpi1d67I57XGYzlCVjqAx53yisqEG%2FdQFzxoYGz4KDFR7LWlZFqlHyUTMmoIipsUNzTSj1eu0TptrFgr2fqicSfif9KmcwTIUcgCNxWFECRWm5zjSAB6KeFbfSnhmShZJGlCY4hHEw%3D&X-Amz-Signature=9b2984e545cbfc7033bc953f98acfdb0cec6a2952a551680487dfee74bff919a&X-Amz-SignedHeaders=host&response-content-disposition=inline"
+              type="video/mp4" />
+          </video>
+
         </div>
         <div class="card card-side card-right">
-          <div class="carousel-section-backdrop"></div>
-          <span class="card-num">03</span>
-          <div class="card-blank"></div>
+          <div class="carousel-section-backdrop">
+            <video autoplay muted loop playsinline class="card-img">
+              <source
+                src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/explode%20view%20-%2012%20-%2004%20-%202026%20%236%20con%20transicion.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAU6GD22XVDTX37MCJ%2F20260414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260414T161254Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIGTZWXge93zbTzVe34YhTkddC3og0jVviAYg07UXSDKRAiBY6AZwHtCC9YEbYp0kbSe63co4G8J3OzAdEmvVsCZC6Sr2AgiR%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDMzOTcxMzExOTcyMiIMTSh0XUSjA9lY5KRkKsoClGrdqB4sEwWc5%2B8Gqwk8yX%2F6l8LBpgiwb4CH94F4FoYhwTQo9TOg%2FFxMsNFoOEVFA7F%2F40BHdWdeS8EcaxGeVJY%2F3beDcQeL26k16wuqYLQUzgcoesGba00YV2XoekjWGquTxsnITGq1Z3Nmv6yxrFmzgJf6nLepRRBlBv6D56tdNL%2BjtvVGfCIMBtChc6PgxMYx8Kvs4kVXRJGP98ucS9NioOhbAKmM7yb0Co32LWEPFKklcP9Qikuc0Tjo6W7b0JbxDaEQ%2BCG9Q9xPQ5Cgn%2FUtGaTS4jRl2lE3YrtSA9BIzsRnzFzGwnkwJg%2FwXNBbh86ryHkMks4pp%2BHC7RDybAoA11CxeHH1tx5UG7KPgGD8PpXgliKmaxjwQM5i78DcjI2p2UCjV%2BoZ0cbggANOdREW9QoqsJyD%2BhDkLyODQv9D7EZBbDOBLyVeMKbL%2Bc4GOq4CZg1utQzQJEOz%2FAGhtCEJkuMtvLgYw3wf8aqt4N0Rg8YqXRb2FaZGGbsrrBUED%2FNjwijvaSFlF9JNeoCBLYeqndl79YdGwD7fPojnCsM9vFPPN%2Fpx47PvI5idM5MXfJBB%2FDrmZOMJM8DIuBKhdzkLt%2FGasBULaS8Mk%2FebgjRtSXndqsUJMuACBkqqupxqZKefon9OPgq7P5iBG0AUTEAtdpS1t%2BMeXwSaoOk5kUu5mXKLOMlasT6eXGEmFsiwWUbuNa2WhtYUQm329FqamMtJ9P2GenqkomHE%2FXt2ofSl0NMnJHZmamUNRODxCF92uDf9HmPfcoR5iKUsuqIzAmg6WSwabS%2BEFR63VJgprNVsnnUf08dCIydTWiNy1VwwuoIEcmaVbCjArThcoZjmBSw%3D&X-Amz-Signature=c5c6feb9e403a310d158aa831ac0ce17a6814935ca484761cbca3a4d7b69b3d3&X-Amz-SignedHeaders=host&response-content-disposition=inline"
+                type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="card-blank">
+
+          </div>
         </div>
       </div>
     </div>
@@ -3308,7 +3463,13 @@
       <div class="features-grid">
         <div class="feature-item">
           <div class="feature-img">
-            <div class="feature-img-inner"></div>
+            <div class="feature-img-inner">
+              <video autoplay muted loop playsinline>
+                <source
+                  src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/recopilatorio%20%234%20-%2020%20-%2003%20-%202026.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAU6GD22XVCN5ZNP3O%2F20260414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260414T161324Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIFH%2Beu8BOpK9dIs4WrPR8cMnSvXVQ5oNm1iUJSH3SVhCAiBN7yHVixkAY0%2B3VxmwRnASgXzxuf9vujnutwL0RxGZ8Cr2AgiR%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDMzOTcxMzExOTcyMiIMEYTrHgapVHAeRXB%2BKsoCOZRSrawPQrhIX5W3ex0Wca%2B1s734hR788wR5zvGEkEcmfo2iebwvl6OegFIAZcgltaNcf%2FaG9pmlX2HUarxwI4S%2FMzeopseM%2BcmCDKRWAcFp1P0komYJcr4ajpLo0i%2FJ%2FOZRhJz%2BSLYp9HGy7fS8AvmrST%2Fe5AnZChKE%2BARJV8eU3G6er%2BW0opyCfQYPEQ2ABj9yZUKI4YmDbY%2BG0DZxXAkaRumOpmnBYQJw%2BZKQ7En%2B0%2BFxznVlpWT0w7QnD7PtvNzf7%2FPNRULjozkigV%2FQ5Kx34Ti2GtDenUjHW4DK%2BYCvFpLdGeo5NPY3qIKyG18HUIV%2BGU5pKXPCffChqpfSDOTINFhjKG8CkiMVDRLeWaYF5iTvhQGARUIurcS%2BBSffuobmWYs1QEx3C3DdxTaurF2TXZTmk06N8jKhxOm6WsvFcRvsQEbqAkrLMKbL%2Bc4GOq4CtB%2Bp5TCv%2FYF4gvxF3hfvcikT5gD96p4hQ6Dtiut6uRLDyHYNVU0h1Jo3qmqXDj9TFQW1ln6mO%2B%2BXr475WJvdEr%2Fe8GSDdVuW6LEUyfs03ZHQUg7TbMaQJ3CHRSCg7N3f%2BoORI0ZsM0TkAkQje6D9jtgahcz05oxNH3dZcr9JF3GLWTIeTTvM6id6Ez5BcnttNjs3sVVqO2QMhq9zCWWGP%2BNNpfEPS7TovDOkemwTNst%2BUnGXTZtLL1RIubsVs5yZgiKx1ZqAXeNP32YDegYKVdPCAdjDUqjQGrrMMsRTPs5%2FBpbSkPea06issN7o%2F8tAndIrm7jKMU%2Fj%2FE2D6M%2B513KT0YbQVY990tf32ZiissXckMrltU%2BZsfWvM9f6BCAz7N5FVWquVLYHIjv%2BZtw%3D&X-Amz-Signature=9d768f1bd58036d7dc1df96808c0c5e25cc757a1650fc415939293b804fa9142&X-Amz-SignedHeaders=host&response-content-disposition=inline"
+                  type="video/mp4" />
+              </video>
+            </div>
           </div>
           <h3 class="feature-title">Hollywood Visual Effects</h3>
           <p class="feature-desc">
@@ -3321,7 +3482,13 @@
         </div>
         <div class="feature-item">
           <div class="feature-img">
-            <div class="feature-img-inner"></div>
+            <div class="feature-img-inner">
+              <video autoplay muted loop playsinline>
+                <source
+                  src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/consistencia%20de%20personaje.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAU6GD22XVMH5IVHTQ%2F20260414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260414T161229Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCICkOVQ3GMYyauoJ22U76yHzGdBBSs%2Fu4Kow%2B2nhk9imqAiEA0gULlepFWJcpn5u5L%2B2tX4yH3ZqwJNHHhPg1Hkk8l14q9gIIkf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwzMzk3MTMxMTk3MjIiDHejmD5xT0Z%2FR1BQ5irKAom2SNehZrCVjjLlPUg%2FIMF8dnNT72%2BYN%2FOuoZBJP6jxDVssc%2FFsb7ZOiOCYJnDpAXPHLIIyhDRYj6rFHGEN%2BVxH4JIQmtguRoZNWPmwMPEOamypRDRfMyUYWOElvqwxkkgPAej9MYTQdC%2BhyriM4m2booAW%2FeuRDgjVedL0by6rwodsB%2FIwh6qbU7laWpF9R53WM2Kt8Qm0qtCfiDR56RCxZKc3aQR%2BmTG5%2FCcpCquTUONWt0zkIbSoKrOeIwmN%2BT9r%2FfwdV0%2Fwd34nH9Y4UFNnLd0P038MMlhxZJJ4A6QjYUEXCFHaxHv0G%2BLcFz%2BL0wCHbiUgN8mEndjHiY7ThJTRIsTI576BwUbzH%2Fa6uu48VKx0wEQqIxewUaIAxz3BMq2Y%2BjyLBdvFQgQZqqYWHzbyg4a7q1CFJ2XfZM%2BQrlhVpQdW9rl6knH02jCmy%2FnOBjqtAqwTNGeFnp5JLoNTTvnFA5kJoYC4zzj%2F%2FU7fUtmp%2FFki5LcybR35flaOWwa3MPBgA1lXFvX9GpZuzWb1pxt8wahR71RVWlb5DDa0Qz5jH1XAHxnOSk8onoMau1m4nwRU9MR%2FB4TbOk5eziXdLgPLJe%2BOisWeoeWRBxBBP9%2FgBBtpTMeElOhVrudgKbzf4WHDAt87dBPXE%2F6r2nWFXlfeXP5KjNFq4CE%2BED89Ar7oAvJs7dlLHN2YDCAd4PSWjYmAcq7gn9u0TLbSQ63c0J5SN6PUMrf2cgh8SmbBWx8vMlroe8fu9Dx%2BxYWPgqxoELndqzHCTq4HV1yr001JQ4HvZHSmeKaZ0rKGMk%2Bpajv21kzZseV7A5Cc6hc%2FGPKG%2B%2BcjZUTgkXPpzwocZxIND5Q%3D&X-Amz-Signature=55952b2beca1b69c44906a83274705793060e32c22abb0c1de139bc8516e575c&X-Amz-SignedHeaders=host&response-content-disposition=inline"
+                  type="video/mp4" />
+              </video>
+            </div>
           </div>
           <h3 class="feature-title">Character Consistency</h3>
           <p class="feature-desc">
@@ -3365,7 +3532,7 @@
           The most powerful creative AI platforms in the world. We teach you all
           of them.
         </h2>
-        <img src="./assets/Frame1707480793.png" alt="AI Platforms" />
+        <img src="./assets/bg-image.png" alt="AI Platforms" class="circle-img" />
       </div>
     </div>
   </section>
@@ -3383,15 +3550,15 @@
 
 
 
-        <div class="step-item">
-          <div class="step-card"></div>
+        <div class="step-item step-item-1">
+          <div class="step-card  "></div>
           <div class="step-num">
             <div class="steps-line"></div>
             1
           </div>
           <div class="step-label">Architecture</div>
         </div>
-        <div class="step-item">
+        <div class="step-item step-item-2">
           <div class="step-card"></div>
           <div class="step-num">2</div>
           <div class="step-label">
@@ -3399,7 +3566,7 @@
             Acquisition
           </div>
         </div>
-        <div class="step-item">
+        <div class="step-item step-item-3">
           <div class="step-card"></div>
           <div class="step-num">
             <div class="steps-line2"></div>
@@ -3410,7 +3577,7 @@
             Delivery
           </div>
         </div>
-        <div class="step-item">
+        <div class="step-item step-item-4">
           <div class="step-card"></div>
           <div class="step-num">4</div>
           <div class="step-label">
@@ -3418,7 +3585,7 @@
             Management
           </div>
         </div>
-        <div class="step-item">
+        <div class="step-item step-item-5">
           <div class="step-card"></div>
           <div class="step-num">
             <div class="steps-line3"></div>
@@ -3429,7 +3596,7 @@
             Systems
           </div>
         </div>
-        <div class="step-item">
+        <div class="step-item step-item-6">
           <div class="step-card"></div>
           <div class="step-num">6</div>
           <div class="step-label">10X <br />Strategy</div>
@@ -4472,10 +4639,7 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ── FAQ ── -->
-  <section class="faq-section">
 
     <div class="stats-grid">
 
@@ -4541,7 +4705,10 @@
       </div>
 
     </div>
+  </section>
 
+  <!-- ── FAQ ── -->
+  <section class="faq-section">
 
     <div class="faq-inner">
       <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -4550,7 +4717,13 @@
         <input type="checkbox" id="faq1" checked />
         <label class="faq-label" for="faq1">
           <div class="faq-q-wrap">
-            <div class="faq-q-icon">?</div>
+            <div class="faq-q-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.87891 7.51884C11.0505 6.49372 12.95 6.49372 14.1215 7.51884C15.2931 8.54397 15.2931 10.206 14.1215 11.2312C13.9176 11.4096 13.6917 11.5569 13.4513 11.6733C12.7056 12.0341 12.0002 12.6716 12.0002 13.5V14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12 17.25H12.0075V17.2575H12V17.25Z"
+                  stroke="#4F1AEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span class="faq-question">Is it lifetime access?</span>
           </div>
           <div class="faq-toggle"></div>
@@ -4563,7 +4736,13 @@
         <input type="checkbox" id="faq2" />
         <label class="faq-label" for="faq2">
           <div class="faq-q-wrap">
-            <div class="faq-q-icon">?</div>
+            <div class="faq-q-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.87891 7.51884C11.0505 6.49372 12.95 6.49372 14.1215 7.51884C15.2931 8.54397 15.2931 10.206 14.1215 11.2312C13.9176 11.4096 13.6917 11.5569 13.4513 11.6733C12.7056 12.0341 12.0002 12.6716 12.0002 13.5V14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12 17.25H12.0075V17.2575H12V17.25Z"
+                  stroke="#4F1AEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span class="faq-question">Is it lifetime access?</span>
           </div>
           <div class="faq-toggle"></div>
@@ -4576,7 +4755,13 @@
         <input type="checkbox" id="faq3" />
         <label class="faq-label" for="faq3">
           <div class="faq-q-wrap">
-            <div class="faq-q-icon">?</div>
+            <div class="faq-q-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.87891 7.51884C11.0505 6.49372 12.95 6.49372 14.1215 7.51884C15.2931 8.54397 15.2931 10.206 14.1215 11.2312C13.9176 11.4096 13.6917 11.5569 13.4513 11.6733C12.7056 12.0341 12.0002 12.6716 12.0002 13.5V14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12 17.25H12.0075V17.2575H12V17.25Z"
+                  stroke="#4F1AEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span class="faq-question">Is it lifetime access?</span>
           </div>
           <div class="faq-toggle"></div>
@@ -4589,7 +4774,13 @@
         <input type="checkbox" id="faq4" />
         <label class="faq-label" for="faq4">
           <div class="faq-q-wrap">
-            <div class="faq-q-icon">?</div>
+            <div class="faq-q-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.87891 7.51884C11.0505 6.49372 12.95 6.49372 14.1215 7.51884C15.2931 8.54397 15.2931 10.206 14.1215 11.2312C13.9176 11.4096 13.6917 11.5569 13.4513 11.6733C12.7056 12.0341 12.0002 12.6716 12.0002 13.5V14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12 17.25H12.0075V17.2575H12V17.25Z"
+                  stroke="#4F1AEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span class="faq-question">Is it lifetime access?</span>
           </div>
           <div class="faq-toggle"></div>
@@ -4602,7 +4793,13 @@
         <input type="checkbox" id="faq5" />
         <label class="faq-label" for="faq5">
           <div class="faq-q-wrap">
-            <div class="faq-q-icon">?</div>
+            <div class="faq-q-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.87891 7.51884C11.0505 6.49372 12.95 6.49372 14.1215 7.51884C15.2931 8.54397 15.2931 10.206 14.1215 11.2312C13.9176 11.4096 13.6917 11.5569 13.4513 11.6733C12.7056 12.0341 12.0002 12.6716 12.0002 13.5V14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12 17.25H12.0075V17.2575H12V17.25Z"
+                  stroke="#4F1AEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span class="faq-question">Is it lifetime access?</span>
           </div>
           <div class="faq-toggle"></div>
@@ -4662,7 +4859,6 @@
   </section>
   <!-- ── CONTACT BAR ── -->
 
-
   <!-- ── FOOTER ── -->
   <footer class="footer-section">
     <div class="footer-logo">
@@ -4682,114 +4878,25 @@
           var startHeight = element.offsetHeight;
           var startTime = null;
 
-          // Don't animate if heights are the same
           if (startHeight === targetHeight) return;
 
           function step(currentTime) {
             if (!startTime) startTime = currentTime;
             var elapsed = currentTime - startTime;
             var progress = Math.min(elapsed / duration, 1);
-
-            // Easing function for smooth motion
             var easeProgress = 1 - Math.pow(1 - progress, 3);
-
             var newHeight = startHeight + (targetHeight - startHeight) * easeProgress;
             element.style.maxHeight = newHeight + 'px';
 
             if (progress < 1) {
               requestAnimationFrame(step);
-            } else {
-              element.style.maxHeight = targetHeight === 0 ? '0px' : 'none';
             }
+            // ← removed the 'none' fallback — stay as pixels
           }
 
           requestAnimationFrame(step);
         }
 
-        function initAccordions() {
-          var allAccordions = document.querySelectorAll('.acc-item, .faq-item');
-          console.log('Found accordions:', allAccordions.length);
-
-          allAccordions.forEach(function (accordion) {
-            var header = accordion.querySelector('.acc-label, .faq-label');
-            var body = accordion.querySelector('.acc-content, .faq-content') || accordion.querySelector('.acc-content, .faq-content');
-            var checkbox = accordion.querySelector('input[type="checkbox"]');
-
-            if (!header || !body) return;
-
-            // Store the actual content height (will be recalculated when needed)
-            var cachedHeight = null;
-
-            function getContentHeight() {
-              // Temporarily show to measure
-              var originalDisplay = body.style.display;
-              var originalMaxHeight = body.style.maxHeight;
-              var originalPadding = body.style.padding;
-
-              body.style.display = 'block';
-              body.style.maxHeight = 'none';
-              body.style.padding = '20px 24px 24px';
-              var height = body.scrollHeight;
-
-              // Restore
-              body.style.display = originalDisplay;
-              body.style.maxHeight = originalMaxHeight;
-              body.style.padding = originalPadding;
-
-              return height;
-            }
-
-            // Set initial styles
-            body.style.overflow = 'hidden';
-            body.style.transition = 'none';
-            body.style.willChange = 'max-height';
-
-            // Set initial state
-            if (checkbox && checkbox.checked) {
-              var initialHeight = getContentHeight();
-              body.style.maxHeight = initialHeight + 'px';
-              body.style.padding = '20px 24px 24px';
-              cachedHeight = initialHeight;
-            } else {
-              body.style.maxHeight = '0px';
-              body.style.padding = '0 24px';
-            }
-
-            // Click handler
-            header.style.cursor = 'pointer';
-            header.onclick = function (e) {
-              e.preventDefault();
-              e.stopPropagation();
-
-              var isOpen = body.style.maxHeight !== '0px';
-
-              if (isOpen) {
-                // CLOSE - animate to 0
-                var currentH = body.offsetHeight;
-                body.style.maxHeight = currentH + 'px';
-
-                setTimeout(function () {
-                  animateHeight(body, 0, 350);
-                }, 10);
-                body.style.padding = '0 24px';
-                if (checkbox) checkbox.checked = false;
-              } else {
-                // OPEN - get fresh height and animate to it
-                var newHeight = getContentHeight();
-                cachedHeight = newHeight;
-
-                // First set to 0, then animate to full height
-                body.style.maxHeight = '0px';
-
-                setTimeout(function () {
-                  animateHeight(body, newHeight, 350);
-                }, 20);
-                body.style.padding = '20px 24px 24px';
-                if (checkbox) checkbox.checked = true;
-              }
-            };
-          });
-        }
 
         // Run on load
         if (document.readyState === 'loading') {
