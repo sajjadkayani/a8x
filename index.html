@@ -5420,6 +5420,14 @@
 
   </div>
 
+  <script>
+    // Re-play autoplay videos when page is restored from bfcache (e.g. on refresh)
+    window.addEventListener('pageshow', function (e) {
+      document.querySelectorAll('video[autoplay]').forEach(function (v) {
+        v.play().catch(function () {});
+      });
+    });
+  </script>
 
 </body>
 
