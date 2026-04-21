@@ -890,10 +890,6 @@
 
     /* ── CIRCLE SECTION ── */
     .sectoin-circle {
-      background-image: url(./assets/Background.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
       padding: 3rem 0 0;
       text-align: center;
       max-width: 100% !important;
@@ -919,6 +915,8 @@
       max-width: 900px;
       display: block;
       margin: 0 auto;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
     }
 
     /* ── BUSINESS MODEL ── */
@@ -2721,6 +2719,12 @@
 
     /* Mobile Large (640px - 768px) */
     @media (max-width: 768px) {
+      .circle-img {
+        width: 140%;
+        max-width: none;
+        margin-left: -20%;
+      }
+
       .card-side {
         width: 200px;
         height: 350px;
@@ -3544,7 +3548,7 @@
           The most powerful creative AI platforms in the world. We teach you all
           of them.
         </h2>
-        <img src="./assets/bg-image.png" alt="AI Platforms" class="circle-img" />
+        <img src="./assets/bg-image-2.png" alt="AI Platforms" class="circle-img" />
       </div>
     </div>
   </section>
