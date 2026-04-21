@@ -2732,17 +2732,23 @@
       }
 
       .card-left {
-        left: calc(20% - 200px);
-        transform: rotate(-4deg) translateY(20px);
+        left: 0px;
+        transform: rotate(-7deg) translateY(20px);
       }
 
       .card-right {
-        right: calc(20% - 200px);
-        transform: rotate(4deg) translateY(20px);
+        right: 0px;
+        transform: rotate(7deg) translateY(20px);
       }
 
       .carousel-section {
         height: auto;
+        overflow: visible;
+      }
+
+      .gradient-bar-left,
+      .gradient-bar-right {
+        display: none;
       }
 
       .carousel-section>.cards-row {
@@ -2800,13 +2806,13 @@
       }
 
       .card-left {
-        left: calc(22% - 160px);
-        transform: rotate(-10deg) translateY(20px);
+        left: -8px;
+        transform: rotate(-13deg) translateY(20px);
       }
 
       .card-right {
-        right: calc(22% - 160px);
-        transform: rotate(10deg) translateY(20px);
+        right: -8px;
+        transform: rotate(13deg) translateY(20px);
       }
 
       .cards-row {
@@ -3514,10 +3520,16 @@
         </div>
         <div class="feature-item">
           <div class="feature-img">
-            <div class="feature-img-inner"></div>
+            <div class="feature-img-inner">
+               <video autoplay muted loop playsinline>
+                <source
+                  src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/video%20ugc%20-%20editado%20-%20version%20%232%20-%2019%20-%2004%20-%202026.mp4"
+                  type="video/mp4" />
+              </video>
+            </div>
           </div>
           <h3 class="feature-title">Profitable Ads</h3>
-          <p class="feature-desc">
+          <p class="feature-desc"> 
             Lorem ipsum dolor sit amet consectetur. Pellentesque vitae at enim
             risus ligula. Faucibus ultricies ut blandit quis ullamcorper
             imperdiet erat. Turpis tortor leo proin massa diam scelerisque. Erat
