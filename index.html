@@ -3463,18 +3463,18 @@
         </div>
         <div class="card card-center">
 
-          <video autoplay muted loop playsinline class="card-img">
+          <video autoplay muted loop playsinline preload="none" class="card-img">
             <source
-              src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/video%20para%20landing%20corregido%20-%2019%20-%2003%20-%202026.mp4"
+              data-src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/Video%20Para%20Landing%20Corregido%20-%2019%20-%2003%20-%202026.mp4"
               type="video/mp4" />
           </video>
 
         </div>
         <div class="card card-side card-right">
           <div class="carousel-section-backdrop">
-            <video autoplay muted loop playsinline class="card-img">
+            <video autoplay muted loop playsinline preload="none" class="card-img">
               <source
-                src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/explode%20view%20-%2012%20-%2004%20-%202026%20%236%20con%20transicion.mp4"
+                data-src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/Explode%20View%20-%2012%20-%2004%20-%202026%20%236%20Con%20Transicion.mp4"
                 type="video/mp4" />
             </video>
           </div>
@@ -3499,9 +3499,9 @@
         <div class="feature-item">
           <div class="feature-img">
             <div class="feature-img-inner">
-              <video autoplay muted loop playsinline>
+              <video autoplay muted loop playsinline preload="none">
                 <source
-                  src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/recopilatorio%20%234%20-%2020%20-%2003%20-%202026.mp4"
+                  data-src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/Recopilatorio%20%234%20-%2020%20-%2003%20-%202026.mp4"
                   type="video/mp4" />
               </video>
             </div>
@@ -3518,9 +3518,9 @@
         <div class="feature-item">
           <div class="feature-img">
             <div class="feature-img-inner">
-              <video autoplay muted loop playsinline>
+              <video autoplay muted loop playsinline preload="none">
                 <source
-                  src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/consistencia%20de%20personaje.mp4"
+                  data-src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/Consistencia%20De%20Personaje.mp4"
                   type="video/mp4" />
               </video>
             </div>
@@ -3536,9 +3536,15 @@
         </div>
         <div class="feature-item">
           <div class="feature-img">
-            <div class="feature-img-inner"></div>
+            <div class="feature-img-inner">
+              <video autoplay muted loop playsinline preload="none">
+                <source
+                  data-src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/The%20Compilation%20-%20Landing%20Page%20%20-%20%235.mp4"
+                  type="video/mp4" /> 
+              </video>
+            </div>
           </div>
-          <h3 class="feature-title">VIRAL Reels, TikToks, Shorts</h3>
+          <h3 class="feature-title">VIRAL Reels, TikToks, Shorts</h3> 
           <p class="feature-desc">
             Lorem ipsum dolor sit amet consectetur. Pellentesque vitae at enim
             risus ligula. Faucibus ultricies ut blandit quis ullamcorper
@@ -3550,11 +3556,12 @@
         <div class="feature-item">
           <div class="feature-img">
             <div class="feature-img-inner">
-               <video autoplay muted loop playsinline>
+               <video autoplay muted loop playsinline preload="none">
                 <source
-                  src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/video%20ugc%20-%20editado%20-%20version%20%232%20-%2019%20-%2004%20-%202026.mp4"
+                  data-src="https://a8x-assets-bucket.s3.us-east-1.amazonaws.com/Video%20Ugc%20-%20Editado%20-%20Version%20%232%20-%2019%20-%2004%20-%202026.mp4"
                   type="video/mp4" />
               </video>
+            
             </div>
           </div>
           <h3 class="feature-title">Profitable Ads</h3>
@@ -5462,6 +5469,25 @@
   </div>
 
   <script>
+    // Lazy-load videos: only fetch from S3 when the video enters the viewport
+    var videoObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var video = entry.target;
+        video.querySelectorAll('source[data-src]').forEach(function (source) {
+          source.src = source.dataset.src;
+          source.removeAttribute('data-src');
+        });
+        video.load();
+        video.play().catch(function () {});
+        videoObserver.unobserve(video);
+      });
+    }, { rootMargin: '200px' });
+
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      videoObserver.observe(v);
+    });
+
     // Re-play autoplay videos when page is restored from bfcache (e.g. on refresh)
     window.addEventListener('pageshow', function (e) {
       document.querySelectorAll('video[autoplay]').forEach(function (v) {
